@@ -43,7 +43,7 @@
     <link href="http://yoursite.com/2020/07/28/My-New-Post/"/>
     <id>http://yoursite.com/2020/07/28/My-New-Post/</id>
     <published>2020-07-27T17:35:45.000Z</published>
-    <updated>2020-07-27T17:45:26.390Z</updated>
+    <updated>2020-07-28T16:01:08.357Z</updated>
     
     <content type="html"><![CDATA[<h3 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h3><p>hexo有点意思哦</p>]]></content>
     
@@ -58,6 +58,10 @@
     </summary>
     
     
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
