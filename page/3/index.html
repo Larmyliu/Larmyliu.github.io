@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Larmy Blog</title><meta name="description"><meta name="author" content="Larmy"><meta name="copyright" content="Larmy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/page/3/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Larmy Blog"><meta property="og:url" content="http://yoursite.com/page/3/"><meta property="og:site_name" content="Larmy Blog"><meta property="og:description"><meta property="og:image" content="http://yoursite.com/img/head4.jpg"><meta property="article:published_time" content="2020-07-29T05:17:12.912Z"><meta property="article:modified_time" content="2020-07-29T05:17:12.912Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e96985cda5177be1671242c01ea37b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Larmy Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/head4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">37</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">1</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/07/29/368C4ibegMGjnDN.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Larmy Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Larmy Blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/29/JavaScript%E4%B9%8B%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="JavaScript之原型和原型链">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript之原型和原型链"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/JavaScript%E4%B9%8B%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="JavaScript之原型和原型链">JavaScript之原型和原型链</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:05:59"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">JavaScript之原型和原型链在JavaScript的学习过程中，原型链肯定是一个很重要的知识点，下面我们就来深入的去看一下原型链
+原型首先看一个很简单的例子
+12345678910111213141516function Person(name, age) &#123;            this.name = name;            this.age = age;            this.sayName = function () &#123;                console.log("i am "+this.name);            &#125;        &#125;        Person.prototype.sayAge = function () &#123;            console.log("i am "+this.age);        &#125;        var person1 = new Person("ljm",18)        person1.sayAge();        ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/29/JavaScript%E4%B9%8B%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%88EC%EF%BC%89/" title="JavaScript之执行上下文（EC）">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript之执行上下文（EC）"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/JavaScript%E4%B9%8B%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%88EC%EF%BC%89/" title="JavaScript之执行上下文（EC）">JavaScript之执行上下文（EC）</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:05:48"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">JavaScript之执行上下文（EC）在JavaScript中，执行上下文是一个基本概念，在执行上下文中，包括了变量对象（VO，Variable Object），作用域链（Scope Chain），this指向等，在闭包，函数/变量提升息息相关
+执行上下文执行上下文可以理解为执行环境，执行环境定义了变量或者函数有权访问其他数据，决定他们各自的行为，执行环境主要包括了全局上下文，函数上下文，eval执行上下文。主要理解的是全局上下文和函数上下文。
+在JavaScript代码执行的过程中，首先进入的就是全局环境，每个函数都有自己的执行环境。所以我们分别叫他们全局上下文和函数上下文
+如何执行执行上下文是以栈的方式被存放起来的，称这个栈为执行上下文栈。
+在JavaScript代码开始执行时，将全局上下文创建并入栈，当调用函数时，会进入对应函数的环境，创建函数上下文并入栈，当栈顶的执行上下文代码执行完毕后，则将其出栈。
+一个简单的例子
+12345678function fn2() &#123;  console.log('fn2')&#125;function fn1() &#123;  co ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/29/JavaScript%E4%B9%8B%E9%97%AD%E5%8C%85%E7%90%86%E8%A7%A3/" title="JavaScript之闭包理解">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript之闭包理解"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/JavaScript%E4%B9%8B%E9%97%AD%E5%8C%85%E7%90%86%E8%A7%A3/" title="JavaScript之闭包理解">JavaScript之闭包理解</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:05:38"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">JavaScript之闭包理解闭包（Closure）是JavaScript学习过程中一个非常重要的问题
+闭包和执行上下文和作用域链有着千丝万缕的关系。闭包是指有权访问另一个函数作用域的变量的函数（JavaScript高级程序设计（第三版）P178）
+闭包是一个函数，对闭包的一个理解可以是所在的执行上下文已经出栈,但是仍然访问了其所在的执行上下文变量对象的函数
+这里所指的所在的执行上下文指的是闭包函数对应的执行上下文，而不是闭包本省所对应的执行上下文
+来一个简单的例子
+12345678function A()&#123;	var a = 2;    function B()&#123;		console.log(a);    &#125;    return B;&#125;A()();
+
+那么他的执行上下文栈行为是这样的
+12345678910111213/*伪代码*/// 代码执行时最先进入全局环境，全局上下文被创建并入栈ECStack.push(globalContext);// A 被调用，A 函数上下文被创建并入栈ECStack.push(&lt;A&gt; functionC ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/29/JavaScript%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" title="JavaScript之深浅拷贝">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript之深浅拷贝"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/JavaScript%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" title="JavaScript之深浅拷贝">JavaScript之深浅拷贝</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:05:30"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">JavaScript之深浅拷贝了解一下JavaScript中的深浅拷贝，以及他们的手写版
+数据类型首先肯定要知道的是JavaScript的数据类型，JavaScript的数据类型可以分为两大类基本数据类型，引用数据类。
+基本数据类型
+Number
+Boolean
+String
+Null
+Undefined
+Symbol
+Bigint
+
+引用数据类型
+Function
+Object
+Array
+
+了解完JavaScript拥有的数据类型后，来看看深浅拷贝
+浅拷贝简单的来说就是，基本数据类型完全拷贝他们的数据，引用数据类型就拷贝内存地址
+实现
+Object.assign()
+12345678910111213141516var obj = &#123;	name: 'ljm',    age: 18,    like:&#123;		first: "sleep"    &#125;&#125;var obj1 = Object.assign(&#123;&#125;,obj)console.log(obj1.name)//ljmconsole.log(obj1.age)//18obj1.a ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/29/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="解决Vscode提示code安装似乎损坏">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决Vscode提示code安装似乎损坏"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="解决Vscode提示code安装似乎损坏">解决Vscode提示code安装似乎损坏</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:05:21"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">最近打开vscode，老是有这样一句提示原因是我安装了一个叫background的拓展，并且编辑器的标题栏会显示不受支持四个字那么如何解决1.下载一个叫Fix VSCode Checksums的拓展2.ctrl+shift+P打开命令面板3.输入Fix Checksums: Apply4.重启vscode即可
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/29/JavaScript%E4%B9%8B%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0new/" title="JavaScript之模拟实现new">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript之模拟实现new"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/JavaScript%E4%B9%8B%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0new/" title="JavaScript之模拟实现new">JavaScript之模拟实现new</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:05:13"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">JavaScript之模拟实现newnew是JavaScript的一个关键字，可以实例化构造函数
+1234567891011function Person(name,age) &#123;	this.name = name;    this.age = age;&#125;Person.prototype.sayHi = function() &#123;    console.log("HI! i am " + this.name);&#125;var person1 = new Person("ljm", 18);console.log(person1.age);//18person1.sayHi();//HI! i am ljmperson1.__proto__ === Person.prototype;//true
+
+从这个例子可以看出
+
+new可以实例化一个对象
+这个对象可以访问构造函数的属性
+这个对象可以访问构造函数原型上的属性
+对象的__proto__指向构造函数的原型
+
+我们来模拟一下new的方法
+1234567891011121314151617181920funct ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/29/JavaScript%E4%B9%8B%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/" title="JavaScript之防抖节流">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript之防抖节流"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/JavaScript%E4%B9%8B%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/" title="JavaScript之防抖节流">JavaScript之防抖节流</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:05:04"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">JavaScript之防抖节流我记得比软设的时候师兄问有没有使用防抖函数或节流函数，当时了解但是没用，过了将近一年，有些知识都忘了，痛定思痛，赶紧补上。
+
+防抖函数（debounce）在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+这个描述就可以知道他的使用场景：输入框校验，手机号、邮箱验证输入检测，防误触
+防抖一般情况下，我们肯定是和Ajax结合，用于和后端进行数据交互，如果频繁的发起Ajax请求，那么无疑会造成很多资源上的浪费
+123456789101112131415161718192021222324&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;    &lt;meta charset="UTF-8"&gt;    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;    &lt;title&gt;防抖节流&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    没有 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AD%98%E5%82%A8/" title="浏览器存储">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浏览器存储"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AD%98%E5%82%A8/" title="浏览器存储">浏览器存储</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:04:49"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">浏览器存储在开发过程中，有些数据我们需要多次用到，但是如果每一次需要就去和服务器请求，那么无疑会造成一定的资源浪费，所以我们可以根据业务需求，把一些数据在浏览器中存储起来，目前最常见的存储方案是：
+
+Cookie
+web存储(localStorage和sessionStorage)
+IndexedDB
+
+Cookie背景因为HTTP协议是无状态的，即服务器不知道用户上一次做了什么，这严重阻碍了交互式Web应用程序的实现。在典型的网上购物场景中，用户浏览了几个页面，买了一盒饼干和两瓶饮料。最后结帐时，由于HTTP的无状态性，不通过额外的手段，服务器并不知道用户到底买了什么，所以Cookie就是用来绕开HTTP的无状态性的“额外手段”之一。服务器可以设置或读取Cookies中包含信息，借此维护用户跟服务器会话中的状态。
+Cookie的又称是HTTP Cookie，最初是在客户端用于存储会话信息，从底层来看，它作为HTTP协议的一种扩展实现，Cookie数据会自动在web浏览器和web服务器之间传输，因此在服务器端脚本就可以读写存储的cookie的值，因此Cookie通常用于存储一些通用的数 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/07/29/Failed%20to%20load%20font%20https___img.yzcdn.cn_vant_vant-icon-d3825a.woff2%20net__ERR_CACHE_MISS/" title="Failed to load font https___img.yzcdn.cn_vant_vant-icon-d3825a.woff2 net__ERR_CACHE_MISS">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Failed to load font https___img.yzcdn.cn_vant_vant-icon-d3825a.woff2 net__ERR_CACHE_MISS"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/Failed%20to%20load%20font%20https___img.yzcdn.cn_vant_vant-icon-d3825a.woff2%20net__ERR_CACHE_MISS/" title="Failed to load font https___img.yzcdn.cn_vant_vant-icon-d3825a.woff2 net__ERR_CACHE_MISS">Failed to load font https___img.yzcdn.cn_vant_vant-icon-d3825a.woff2 net__ERR_CACHE_MISS</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:04:45"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">在微信开发者工具引入了vant weapp 库，但是在使用icon的时候，在开发者工具中无法显示icon，以及报错在github上找到了一些回答github
+出现这个错误是开发者工具的问题，启用真机调试，看看真机上会不会有这个问题。如果真机上可以显示，那么就更新你的开发者工具（下载最新那版），之后再开发者工具里就可以看见图标了
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/07/29/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/" title="性能优化：细说浏览器渲染的重排与重绘">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="性能优化：细说浏览器渲染的重排与重绘"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/07/29/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/" title="性能优化：细说浏览器渲染的重排与重绘">性能优化：细说浏览器渲染的重排与重绘</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-07-29 13:04:33"><i class="far fa-calendar-alt"></i>2020-07-29</time></div><div class="content">前端性能优化：细说浏览器渲染的重排与重绘前端性能优化因为涉及到计算机网络、数据算法、图形图像处理、浏览器渲染等多方面计算机知识，常作为前端工程师乐此不疲的技术讨论话题，也正因如此，它也是面试时容易被问及的面试题之一。
+缘起
+本篇文章缘起一次偶然的面试问答所引申出的思考整理，着笔于浏览器渲染的角度，探讨前端性能优化的思路和实践建议，当然，浏览器渲染是一个复杂的过程，本文笔者将围绕重排和重绘两个关键词开始行文。
+目录结构
+文章大致行文思路如下：
+
+URL从输入到页面展示的过程
+DOM和JavaScript的关系
+为什么操作DOM会很“慢”
+浏览器解析HTML的过程
+重排
+重绘
+优化方案
+
+URL从输入到页面展示的过程
+
+在探讨浏览器解析html之前，先了解url从输入到最后页面渲染的过程是一个很有必要的步骤，它可以帮助我们把握整体流程，让我们在了解HTML解析细节之前知道它处于整个请求周期中的哪一阶段，这对我们构建完善知识图谱很有帮助。
+
+首先，我们假设输入的url的请求为最简单的Http请求，以GET请求为例，大致分以下几个步骤：
+
+用户在浏览器的地址栏输入访问的URL地址。浏览器会先根 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Larmy</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">37</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">1</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">1</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/07/29/CSS3%E5%8A%A8%E7%94%BB%E4%B9%8B%E6%97%8B%E8%BD%AC%E5%B0%8F%E9%AD%94%E6%96%B9/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="CSS3动画之旋转小魔方" alt="CSS3动画之旋转小魔方"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/29/CSS3%E5%8A%A8%E7%94%BB%E4%B9%8B%E6%97%8B%E8%BD%AC%E5%B0%8F%E9%AD%94%E6%96%B9/" title="CSS3动画之旋转小魔方">CSS3动画之旋转小魔方</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-29 13:09:58">2020-07-29</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/29/%E5%89%8D%E7%AB%AFcanvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%95%A6a%E6%A2%A6/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="前端canvas绘制多啦a梦" alt="前端canvas绘制多啦a梦"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/29/%E5%89%8D%E7%AB%AFcanvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%95%A6a%E6%A2%A6/" title="前端canvas绘制多啦a梦">前端canvas绘制多啦a梦</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-29 13:09:43">2020-07-29</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/29/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="错误_Module parse failed_ Unexpected character '�' (1_0)的解决方法" alt="错误_Module parse failed_ Unexpected character '�' (1_0)的解决方法"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/29/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="错误_Module parse failed_ Unexpected character '�' (1_0)的解决方法">错误_Module parse failed_ Unexpected character '�' (1_0)的解决方法</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-29 13:09:33">2020-07-29</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/29/%E7%BA%AF%E5%89%8D%E7%AB%AF%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E6%88%98/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="纯前端微信小程序实战" alt="纯前端微信小程序实战"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/29/%E7%BA%AF%E5%89%8D%E7%AB%AF%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E6%88%98/" title="纯前端微信小程序实战">纯前端微信小程序实战</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-29 13:09:25">2020-07-29</time></div></a></div><div class="aside-recent-post"><a href="/2020/07/29/js%E5%AE%BD%E6%9D%BE%E6%AF%94%E8%BE%83%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%88x==y%EF%BC%89/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="js宽松比较中的类型转换（x==y）" alt="js宽松比较中的类型转换（x==y）"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/07/29/js%E5%AE%BD%E6%9D%BE%E6%AF%94%E8%BE%83%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%88x==y%EF%BC%89/" title="js宽松比较中的类型转换（x==y）">js宽松比较中的类型转换（x==y）</div><time class="aside-post_meta post-meta__date" title="发表于 2020-07-29 13:09:13">2020-07-29</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/hexo/" style="font-size: 16px; color: #999">hexo</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">37</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">37</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/07/28 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Larmy</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi! Welcome to my blog!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  var subtitleEffect = true
+  fetch('https://api.btstu.cn/yan/api.php?charset=utf-8&encode=json',)
+    .then(function (res) {
+      return res.json()
+    })
+    .then(function (data) {
+      if (subtitleEffect) {
+        var sub = "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".length == 0 ? new Array() : "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".split(',')
+        var both = sub.unshift(data.text)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.text
+      }
+    })
+    .catch(function (err) {
+      console.error(err)
+    })
+}
+window.addEventListener('load', subtitleType)
+</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"log":false,"tagMode":false});</script></body></html>
