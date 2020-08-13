@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://larmyliu.github.io/JS-%E5%BC%82%E6%AD%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E7%A8%8B%E4%BB%A5%E5%8F%8A%E4%BC%98%E7%BC%BA%E7%82%B9%E3%80%82/</loc>
+    
+    <lastmod>2020-08-13T07:46:53.581Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://larmyliu.github.io/JavaScript%E4%B9%8B%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0new/</loc>
+    
+    <lastmod>2020-08-13T07:40:54.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://larmyliu.github.io/setTimeout%E3%80%81Promise%E3%80%81Async-Await-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2020-08-13T03:10:43.794Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://larmyliu.github.io/Set%E3%80%81Map%E3%80%81WeakSet-%E5%92%8C-WeakMap-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2020-08-13T02:38:13.001Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://larmyliu.github.io/node+websocket%20%E7%AE%80%E6%98%93%E5%A4%9A%E4%BA%BA%E8%81%8A%E5%A4%A9%E5%AE%A4/</loc>
     
     <lastmod>2020-08-06T10:09:27.312Z</lastmod>
@@ -222,13 +250,6 @@
     <loc>https://larmyliu.github.io/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/</loc>
     
     <lastmod>2020-07-29T05:05:21.683Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://larmyliu.github.io/JavaScript%E4%B9%8B%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0new/</loc>
-    
-    <lastmod>2020-07-29T05:05:13.639Z</lastmod>
     
   </url>
   
