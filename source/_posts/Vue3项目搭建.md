@@ -11,7 +11,7 @@ categories:前端
 基于[官方文档](https://v3.cn.vuejs.org/guide/installation.html)
 ### 条件
 
- - Node 8+
+ - Node 8+;
  - vue-cli 4+
  - npm 6.1+
 
