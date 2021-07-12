@@ -35,7 +35,7 @@ categories: 前端
 
    - axios支持防止`CSRF`（跨站请求伪造）
 
-     ![image-20210126201440976](C:\Users\jazminliu\AppData\Roaming\Typora\typora-user-images\image-20210126201440976.png)
+     ![image-20210126201440976](image-20210126201440976.png)
 
      在`axios`源码中有防止`CSRF`的字段，可以在配置的时候设置该字段起到防止`CSRF`（我在具体开发过程中还没试过这个，有机会试一下）
 
@@ -47,7 +47,7 @@ GitHub上拉取源码 https://github.com/cookhot/axios/tree/analysis
 
 核心内容在`/lib`文件下
 
-![image-20210126204636174](C:\Users\jazminliu\AppData\Roaming\Typora\typora-user-images\image-20210126204636174.png)
+![image-20210126204636174](image-20210126204636174.png)
 
 首先分析`axios`核心文件`/lib/axios.js`
 
