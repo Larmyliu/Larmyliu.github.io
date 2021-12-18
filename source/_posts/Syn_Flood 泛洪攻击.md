@@ -20,13 +20,13 @@ Syn-Flood攻击是当前网络上最为常见的DDoS攻击，也是最为经典�
 
 原理是syn报文首先由DDOS防护系统来响应syn_ack。带上特定的sequence number （记为cookie）。真实的客户端会返回一个ack 并且Acknowledgment number 为cookie+1。 而伪造的客户端，将不会作出响应。这样我们就可以知道那些IP对应的客户端是真实的，将真实客户端IP加入白名单。下次访问直接通过，而其他伪造的syn报文就被拦截。下面为防护示意图： 
 
- ![img](https://img-blog.csdn.net/201808221657522?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM0Nzc3NjAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image-20211218195200275](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/image-20211218195200275.png)
 
 ### **reset认证：** 
 
 Reset认证利用的是TCP协议的可靠性，也是首先由DDOS防护系统来响应syn。防护设备收到syn后响应syn_ack,将Acknowledgement number (确认号)设为特定值（记为cookie）。当真实客户端收到这个报文时，发现确认号不正确，将发送reset报文，并且sequence number 为cookie + 1。 而伪造的源，将不会有任何回应。这样我们就可以将真实的客户端IP加入白名单。 
 
-![img](https://img-blog.csdn.net/20180822170021584?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM0Nzc3NjAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![image-20211218195213640](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/image-20211218195213640.png)
 
 ### TCP首包丢弃:
 
