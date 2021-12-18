@@ -25,7 +25,7 @@ var vm = new Vue({
 });
 ```
 
-![1596277495272](1596277495272.png)
+![1596277495272](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/1596277495272.png)
 
 里面有一个set和get，这是使用了`Object`里面的`defineProperty`，我们新建一个空对象，使用一下这个函数
 
@@ -45,9 +45,9 @@ Person.name = 'LJM';
 console.log(Person.name)
 ```
 
-![1596277597282](1596277597282.png)
+![1596277597282](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/1596277597282.png)
 
-![1596277666179](1596277666179.png)
+![1596277666179](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/1596277666179.png)
 
 可以看出，我们对`defineProperty`函数的set和get方法进行了重写，而且结构也和Vue实现的结构差不多，所以Vue是通过`defineProperty`进行数据劫持的。
 
@@ -371,9 +371,9 @@ window.setTimeout(function () {
 </html>
 ```
 
-![1596278186597](1596278186597.png)
+![1596278186597](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/1596278186597.png)
 
-![1596278197253](1596278197253.png)
+![1596278197253](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/1596278197253.png)
 
 确实在两秒后变换了数据，但是现在还没有解析器去解析`{ { } }`是直接利用`innerHtml`来替换里面的所有数据
 
@@ -754,4 +754,4 @@ class Compile  {
 </script>
 ```
 
-![1596288579053](1596288579053.png)
+![1596288579053](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/1596288579053.png)

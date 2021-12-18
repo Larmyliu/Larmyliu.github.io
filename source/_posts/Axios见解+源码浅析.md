@@ -35,7 +35,7 @@ categories: 前端
 
    - axios支持防止`CSRF`（跨站请求伪造）
 
-     ![image-20210126201440976](image-20210126201440976.png)
+     ![image-20210126201440976](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/image-20210126201440976.png)
 
      在`axios`源码中有防止`CSRF`的字段，可以在配置的时候设置该字段起到防止`CSRF`（我在具体开发过程中还没试过这个，有机会试一下）
 
@@ -47,7 +47,7 @@ GitHub上拉取源码 https://github.com/cookhot/axios/tree/analysis
 
 核心内容在`/lib`文件下
 
-![image-20210126204636174](image-20210126204636174.png)
+![image-20210126204636174](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/image-20210126204636174.png)
 
 首先分析`axios`核心文件`/lib/axios.js`
 
@@ -359,7 +359,7 @@ module.exports = function dispatchRequest(config) {
 
 在axios官网有这样的介绍，其实就是通过适配器（adapter）来做到的
 
-![image-20210129163808931](C:\Users\jazminliu\AppData\Roaming\Typora\typora-user-images\image-20210129163808931.png)
+![image-20210129163808931](https://larmy-1303020690.cos.ap-guangzhou.myqcloud.com/image-20210129163808931.png)
 
 在`lib/defaults.js`，有默认适配器，如果是浏览器端，就会引入`xhr.js`，这是对`XMLHttpRequest`的封装，如果是`node`环境，封装的就是`node`的`http`库
 
