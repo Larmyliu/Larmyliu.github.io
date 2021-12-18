@@ -4,7 +4,7 @@ date: 2021-12-18 20:30:04
 tags:
   - 腾讯云
   - typora
-categories:杂七杂八
+categories: 杂七杂八
 ---
 
 # typora+PicGo+腾讯云COS实现图片一键上传
