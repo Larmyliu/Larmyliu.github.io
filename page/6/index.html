@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Larmy Blog</title><meta name="description"><meta name="author" content="Larmy"><meta name="copyright" content="Larmy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://larmyliu.github.io/page/6/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Larmy Blog"><meta property="og:url" content="https://larmyliu.github.io/page/6/"><meta property="og:site_name" content="Larmy Blog"><meta property="og:description"><meta property="og:image" content="https://larmyliu.github.io/img/head4.jpg"><meta property="article:published_time" content="2024-06-30T06:36:18.774Z"><meta property="article:modified_time" content="2024-06-30T06:36:18.774Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e96985cda5177be1671242c01ea37b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Larmy Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/head4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">79</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/07/29/368C4ibegMGjnDN.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Larmy Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Larmy Blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E5%89%8D%E7%AB%AFcanvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%95%A6a%E6%A2%A6/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%89%8D%E7%AB%AFcanvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%95%A6a%E6%A2%A6/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">最近学了canvas，写个小实例来巩固一下知识点上一下效果图：运用到的函数（具体使用方法可以自行搜索相关文档）
+
+moveTo()
+lineTo()
+arc()
+quadraticCurveTo()
+bezierCurveTo()
+beginPath()
+fillStyle 
+stroke()
+fill()
+
+ 代码内容：1.绘画头部先利用arc()，画出外部的圆，再利用二次贝塞尔曲线画出面部轮廓效果图：（白色多出的部分没关系，因为还要画项圈）代码：
+123456789101112131415161718cxt.beginPath();//起始路径     cxt.lineWidth = 1;//线宽度为1     cxt.strokeStyle = &#x27;#000&#x27;;//笔触的颜色     cxt.arc(200,200,140,Math.PI*0.3,Math.PI*0.7,1);     cxt.fillStyle = &#x27;#0bb0da&#x27;;     cxt.fill();     cxt.stroke();     cxt.beginPath( ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fcss%E6%8A%A5%E9%94%99_at-rule%20or%20selector%20expected/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fcss%E6%8A%A5%E9%94%99_at-rule%20or%20selector%20expected/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">在写微信小程序，前几天还好好的，今天换了一个基础库后发现wxml页面报错了错误提示虽然页面能够显示，功能能够使用，但是看得很不舒服
+如何修改：在微信开发者工具右下角，把HTML换成XML更改前：
+更改后：就没有报错了
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">前端性能优化：细说浏览器渲染的重排与重绘前端性能优化因为涉及到计算机网络、数据算法、图形图像处理、浏览器渲染等多方面计算机知识，常作为前端工程师乐此不疲的技术讨论话题，也正因如此，它也是面试时容易被问及的面试题之一。
+缘起
+本篇文章缘起一次偶然的面试问答所引申出的思考整理，着笔于浏览器渲染的角度，探讨前端性能优化的思路和实践建议，当然，浏览器渲染是一个复杂的过程，本文笔者将围绕重排和重绘两个关键词开始行文。
+目录结构
+文章大致行文思路如下：
+
+URL从输入到页面展示的过程
+DOM和JavaScript的关系
+为什么操作DOM会很“慢”
+浏览器解析HTML的过程
+重排
+重绘
+优化方案
+
+URL从输入到页面展示的过程
+
+在探讨浏览器解析html之前，先了解url从输入到最后页面渲染的过程是一个很有必要的步骤，它可以帮助我们把握整体流程，让我们在了解HTML解析细节之前知道它处于整个请求周期中的哪一阶段，这对我们构建完善知识图谱很有帮助。
+
+首先，我们假设输入的url的请求为最简单的Http请求，以GET请求为例，大致分以下几个步骤：
+
+用户在浏览器的地址栏输入访问的URL地址。浏览器会先根 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E5%B9%B6%E5%8F%91/" title="并发">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="并发"></a></div><div class="recent-post-info"><a class="article-title" href="/%E5%B9%B6%E5%8F%91/" title="并发">并发</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-03-07 20:17:24"><i class="far fa-calendar-alt"></i>2024-03-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Golang/">Golang</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%90%8E%E7%AB%AF/">后端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Golang/">Golang</a></span></div><div class="content">并发在现实生活中，同时处理多件事情是非常常见的现象。比如一边上厕所一边玩手机，一边洗澡一边听歌等等。那在开发的过程中，我们也会有同时进行多个任务的需求，这就是我们常说的并发。
+go并发go语言和其他语言相比，在处理并发方面有其得天独厚的优势，通过goroutine和channel在底层已经帮各位开发者处理好了并发的问题，只需要通过关键字go就可以启动一个新的goroutine。
+举个🌰
+123456789101112131415161718package mainimport (	&quot;fmt&quot;	&quot;time&quot;)func sayHi(name string) &#123;	for i := 0; i &lt; 10; i++ &#123;		time.Sleep(time.Second)		fmt.Printf(&quot;%s say hi\n&quot;, name)	&#125;&#125;func main() &#123;	go sayHi(&quot;liujiamin&quot;)	sayHi(&quot;larmy&quot;)&#1 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/typora-PicGo-%E8%85%BE%E8%AE%AF%E4%BA%91COS%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E4%B8%80%E9%94%AE%E4%B8%8A%E4%BC%A0/" title="typora+PicGo+腾讯云COS实现图片一键上传">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="typora+PicGo+腾讯云COS实现图片一键上传"></a></div><div class="recent-post-info"><a class="article-title" href="/typora-PicGo-%E8%85%BE%E8%AE%AF%E4%BA%91COS%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E4%B8%80%E9%94%AE%E4%B8%8A%E4%BC%A0/" title="typora+PicGo+腾讯云COS实现图片一键上传">typora+PicGo+腾讯云COS实现图片一键上传</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-12-18 20:30:04"><i class="far fa-calendar-alt"></i>2021-12-18</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/">腾讯云</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/typora/">typora</a></span></div><div class="content">typora+PicGo+腾讯云COS实现图片一键上传typora应该是很多人都会使用的一个记笔记软件，支持markdown，体验感极佳
+但是在分享md文件时，往往出现md内的图片裂开，这是因为引用的是md作者电脑的本地文件，所以别人无法查看到图片
+所以可以使用PicGo+腾讯云COS实现图片上传功能
+PicGo下载picGo下载地址 https://github.com/Molunerfinn/PicGo/releases
+
+图床配置
+
+目前要选择V5版本（2021-12-18）
+
+创建存储桶
+
+
+
+一定要选公有读私有写
+
+存储桶的名称对应存储空间名，地域英文对应确认存储区域
+
+设置访问管理
+
+
+新建秘钥
+
+APPID和SecretId、SecretKey都有，对应填上去
+保存、设置为默认地址
+typora设置
+现在上传图片就会自动上传到图床，图片地址也变成图床地址
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Axios%E8%A7%81%E8%A7%A3+%E6%BA%90%E7%A0%81%E6%B5%85%E6%9E%90/" title="Axios见解+源码浅析">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Axios见解+源码浅析"></a></div><div class="recent-post-info"><a class="article-title" href="/Axios%E8%A7%81%E8%A7%A3+%E6%BA%90%E7%A0%81%E6%B5%85%E6%9E%90/" title="Axios见解+源码浅析">Axios见解+源码浅析</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-02-09 10:59:35"><i class="far fa-calendar-alt"></i>2021-02-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="content">Axios见解+源码浅析​	在前后端项目开发过程中，从前台获取后台数据是一个很基本的操作，在我最开始学习的时候，是用XMLHttpRequest用于发送数据，到后面用JQuery封装好的ajax，开始接触前端VUE框架后，用axios来请求数据
+为什么使用axios而不是ajax其实一开始我也有这样的想法，既然已经有了ajax，为什么我们在VUE项目中还是推荐使用axios呢，参考一些文章得出以下结论
+主要从以下几个方面来看
+
+大小
+
+axios的体积比ajax要小的多，因为使用ajax要使用JQuery库（性能即王道）
+
+
+针对方向
+
+axios 符合前端MVVM的浪潮
+ajax 本身是针对MVC的编程
+
+
+实现方法与返回值
+
+axios 用promise技术实现对ajax技术的封装 返回值是 promise（通过then可以进行链式调用，有效避免了回调地狱的问题）
+ajax  基于原生的XHR开发，XHR本身的架构不清晰，已经有了fetch的替代方案
+
+
+安全
+
+axios支持防止CSRF（跨站请求伪造）
+
+在axios源码中有防止CSRF的字段，可以在配置的时候设置该字段起到防止 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/vue-cli4-5%E5%88%9B%E5%BB%BAVue3-x%E5%BC%95%E5%85%A5element-ui/" title="vue-cli4.5创建Vue3.x引入element-ui">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue-cli4.5创建Vue3.x引入element-ui"></a></div><div class="recent-post-info"><a class="article-title" href="/vue-cli4-5%E5%88%9B%E5%BB%BAVue3-x%E5%BC%95%E5%85%A5element-ui/" title="vue-cli4.5创建Vue3.x引入element-ui">vue-cli4.5创建Vue3.x引入element-ui</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-18 19:37:21"><i class="far fa-calendar-alt"></i>2021-01-18</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Vue3/">Vue3</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/element/">element</a></span></div><div class="content">在Vue项目中常使用的一个UI库就是element-ui了
+注意目前element-ui只支持Vue2.6以下的版本，如果想在Vue3.0使用这个组件库，就要使用element-pluselement-plus官网
+步骤在Vue3项目根目录下	
+12vue add element-plusnpm install vue-cli-plugin-element-plus
+全局引用src&#x2F;plugins&#x2F;element.js
+12345import ElementPlus from &#x27;element-plus&#x27;import &#x27;element-plus/lib/theme-chalk/index.css&#x27;export default (app) =&gt; &#123;  app.use(ElementPlus)&#125;
+就可以使用组件了
+按需引入在下载element-plus后，会自动帮我们创建一个配置文件，放在/src/plugins/element.js，全局引入的时候代码放在这里，更能体现模块独立的思想但是按需引入需要使用 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Vue3%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" title="Vue3项目搭建">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue3项目搭建"></a></div><div class="recent-post-info"><a class="article-title" href="/Vue3%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" title="Vue3项目搭建">Vue3项目搭建</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2021-01-15 16:39:19"><i class="far fa-calendar-alt"></i>2021-01-15</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Vue3/">Vue3</a></span></div><div class="content">此文将介绍如何搭建一个Vue3项目基于官方文档
+条件
+Node 8+;
+vue-cli 4+
+npm 6.1+
+
+可以再cmd中输入以下指令查看当前版本
+123node -vvue -Vnpm -v
+
+对于 Vue 3，你应该使用 npm 上可用的 Vue CLI v4.5 作为 @vue/cli。要升级，你应该需要全局重新安装最新版本的 @vue/cli：
+1234// 卸载npm uninstall vue-cli -g// 安装npm install @vue/cli -g
+也可以使用cnpm下载，这样速度会快很多
+创建项目CLI创建项目把项目创建在myproject目录下
+1vue create myproject 
+创建完成后可以在8080端口访问
+vite创建项目尤大在vue3发布的时候着重说vite，所以也可以用vite+vue3来构建项目官网讲的很详细
+1234npm init vite-app &lt;project-name&gt;cd &lt;project-name&gt;npm installnpm run dev
+可以再3000端口启动项目亲测证明vite启 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6/" title="事件循环机制">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="事件循环机制"></a></div><div class="recent-post-info"><a class="article-title" href="/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6/" title="事件循环机制">事件循环机制</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-12-20 16:56:00"><i class="far fa-calendar-alt"></i>2020-12-20</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">-前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span></div><div class="content">事件循环机制首先，JavaScript是一门单线程语言，在一个时间上只能做一件事情
+那么我们我们可能有很多个事情（任务）需要去完成，这时候，JavaScript就把我们要完成的任务放在了任务队列，并且分为了同步任务和异步任务
+任务队列所有任务都可以分为同步任务和异步任务。同步任务就是我们要立即执行的任务，一般会直接进入主线程执行。异步任务，就是可以异步执行的任务，比如网络资源请求，setTimeout这些，会通过任务队列( Event Queue )的机制来进行协调
+
+同步任务进入主线程，异步任务进入任务队列。当主线程内的所有任务执行完毕后，会去任务队列里读取相应的任务推入主线程执行，这就是我们常说的Event Loop（事件循环）
+每次事件循环关键步骤如下图所示：
+
+
+首先判断JS是同步还是异步,同步就进入主线程,异步就进入event table
+异步任务在event table中注册函数,当满足触发条件后,被推入event queue
+同步任务进入主线程后一直执行,直到主线程空闲时,才会去event queue中查看是否有可执行的异步任务,如果有就推入主线程中
+
+宏任务主要包含：s ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" title="三次握手，四次挥手">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三次握手，四次挥手"></a></div><div class="recent-post-info"><a class="article-title" href="/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" title="三次握手，四次挥手">三次握手，四次挥手</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-12-08 10:59:35"><i class="far fa-calendar-alt"></i>2020-12-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/http/">http</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></span></div><div class="content">为了能够使浏览器和服务器通信，浏览器和服务器之间通过三次握手，来建立TCP连接。通过四次挥手，来结束TCP连接。
+三次握手
+过程
+
+客户端主动向服务端发起请求（准备开始进行第一次握手）
+客户端向服务器发起TCP连接请求报文，请求报文中将同步位SYN置为1，随机生成一个序列号seq（第一次握手）
+服务器收到请求后发回一个确认报文，确认报文中同步位SYN和确认位ACK置为1，随机生成一个序列号seq和返回确认编号ack（第二次握手）
+客户端收到服务器的确认报文后，返回给服务器一个确认报文，将确认位ACK置为1，seq为第一次握手随机生成的x+1，ack为服务器确认报文的序列号+1y+1（第三次握手）
+双方开始通信
+
+大白话
+客户端想要发送数据，告诉服务器他想要建立TCP连接（第一次握手），服务器收到请求后，和客户端说你可以发送数据（第二次握手），客户端得到服务器的确认后和服务器说那我要开始发送数据了（第三次握手），然后双方愉快的开始通信
+为什么需要三次握手
+第一种说法
+确保服务器和客户端都知道对方的序列号还让他们双方都互相知道对方知道，第一次握手是服务器知道客户端的序列号，第二次握手是客户 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/5/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Larmy</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">79</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">15</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">6</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="聊聊加解密那些事" alt="聊聊加解密那些事"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="聊聊加解密那些事">聊聊加解密那些事</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:20:44">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">-前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Golang/"><span class="card-category-list-name">Golang</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/nodeJS/"><span class="card-category-list-name">nodeJS</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"><span class="card-category-list-name">杂七杂八</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Golang/" style="font-size: 17.5px; color: #999da3">Golang</a> <a href="/tags/JavaScript/" style="font-size: 20.5px; color: #99a5b6">JavaScript</a> <a href="/tags/Vue/" style="font-size: 16px; color: #999">Vue</a> <a href="/tags/Vue3/" style="font-size: 17.5px; color: #999da3">Vue3</a> <a href="/tags/element/" style="font-size: 16px; color: #999">element</a> <a href="/tags/hexo/" style="font-size: 17.5px; color: #999da3">hexo</a> <a href="/tags/http/" style="font-size: 19px; color: #99a1ac">http</a> <a href="/tags/nodeJS/" style="font-size: 19px; color: #99a1ac">nodeJS</a> <a href="/tags/typora/" style="font-size: 16px; color: #999">typora</a> <a href="/tags/websocket/" style="font-size: 16px; color: #999">websocket</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 22px; color: #99a9bf">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 17.5px; color: #999da3">后端</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 20.5px; color: #99a5b6">笔记</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 16px; color: #999">腾讯云</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px; color: #999">计算机网络</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">53</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">79</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/07/28 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Larmy</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi! Welcome to my blog!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  var subtitleEffect = true
+  fetch('https://api.btstu.cn/yan/api.php?charset=utf-8&encode=json',)
+    .then(function (res) {
+      return res.json()
+    })
+    .then(function (data) {
+      if (subtitleEffect) {
+        var sub = "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".length == 0 ? new Array() : "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".split(',')
+        var both = sub.unshift(data.text)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.text
+      }
+    })
+    .catch(function (err) {
+      console.error(err)
+    })
+}
+window.addEventListener('load', subtitleType)
+</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"log":false,"tagMode":false});</script></body></html>

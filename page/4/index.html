@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Larmy Blog</title><meta name="description"><meta name="author" content="Larmy"><meta name="copyright" content="Larmy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://larmyliu.github.io/page/4/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Larmy Blog"><meta property="og:url" content="https://larmyliu.github.io/page/4/"><meta property="og:site_name" content="Larmy Blog"><meta property="og:description"><meta property="og:image" content="https://larmyliu.github.io/img/head4.jpg"><meta property="article:published_time" content="2024-06-30T06:36:18.765Z"><meta property="article:modified_time" content="2024-06-30T06:36:18.765Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e96985cda5177be1671242c01ea37b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Larmy Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/head4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">79</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/07/29/368C4ibegMGjnDN.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Larmy Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Larmy Blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Syn_Flood%20%E6%B3%9B%E6%B4%AA%E6%94%BB%E5%87%BB/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/Syn_Flood%20%E6%B3%9B%E6%B4%AA%E6%94%BB%E5%87%BB/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">Syn_Flood 泛洪攻击什么是泛洪攻击Syn-Flood攻击是当前网络上最为常见的DDoS攻击，也是最为经典的拒绝服务攻击，它利用了TCP协议实现上的一个缺陷，通过向网络服务所在端口发送大量的伪造源地址的攻击报文，就可能造成目标服务器中的半开连接队列被占满，从而阻止其他合法用户进行访问。
+在TCP连接的时候需要进行三次握手
+
+那么泛洪攻击就是利用三次握手中最后一次的确认握手来发起攻击
+攻击者先伪造地址对服务器发起连接请求，服务器收到请求后会返回确认ack，给真正的地址客户端，真正的地址客户端其实并没有发起请求，所有他不会理服务器的确认ack，因为服务器没有收到客户端的确认ack，所有他会一直重发请求，造成资源上的浪费。
+如果攻击者大量发送这种伪造源地址的SYN请求，服务器端将会消耗非常多的资源来处理这种半连接，保存遍历会消耗非常多的CPU时间和内存，何况还要不断对这个列表中的IP进行SYN+ACK的重试。TCP是可靠协议，这时就会重传报文，默认重试次数为5次，重试的间隔时间从1s开始每次都番倍，分别为1s + 2s + 4s + 8s +16s &#x3D; 31s,第5次发出后还 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Uncaught%20TypeError_%20__WEBPACK_IMPORTED_MODULE_0_jquery___default(...)(...).niceScroll%20is%20not%20a%20funct/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/Uncaught%20TypeError_%20__WEBPACK_IMPORTED_MODULE_0_jquery___default(...)(...).niceScroll%20is%20not%20a%20funct/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">VUE报错Uncaught TypeError: __WEBPACK_IMPORTED_MODULE_0_jquery___default(…)(…).niceScroll is not a function
+在vue项目里报了这个错，原因是我想在这个地方初始化时，利用一下一下jq的美化滚动条
+报错原因我在mounted里面写的美化滚动条解决方法应该在外部js写好，在vue中引用
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/Web%20Worker%20%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/Web%20Worker%20%E4%BB%8B%E7%BB%8D%E5%92%8C%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript是单线程语言，前面的任务没做完，后面的任务只能等着。web worker可以为JavaScript创建多线程环境，好处是，一些计算密集型或高延迟的任务，被 Worker 线程负担了，主线程（通常负责 UI 交互）就会很流畅，不会被阻塞或拖慢。
+Web Worker 有以下几个使用注意点。
+（1）同源限制
+分配给 Worker 线程运行的脚本文件，必须与主线程的脚本文件同源。
+（2）DOM 限制
+Worker 线程所在的全局对象，与主线程不一样，无法读取主线程所在网页的 DOM 对象，也无法使用document、window、parent这些对象。但是，Worker 线程可以navigator对象和location对象。
+（3）通信联系
+Worker 线程和主线程不在同一个上下文环境，它们不能直接通信，必须通过消息完成。
+（4）脚本限制
+Worker 线程不能执行alert()方法和confirm()方法，但可以使用 XMLHttpRequest 对象发出 AJAX 请求。
+（5）文件限制
+Worker 线程无法读取本地文件，即不能打开本机的文件系统（file:&#x ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/css%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/css%E5%B1%85%E4%B8%AD%E6%96%B9%E5%BC%8F/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">html结构比较简单
+1234567&lt;body&gt;    &lt;div class=&quot;outer&quot;&gt;        &lt;div class=&quot;inner&quot;&gt;        &lt;/div&gt;    &lt;/div&gt;&lt;/body&gt;
+
+水平居中1.margin
+12345678910111213141516*&#123;     padding: 0;     margin: 0; &#125; .outer&#123;     width: 400px;     height: 400px;     background-color: red;     margin: 0 auto; &#125; .inner&#123;     width: 200px;     height: 200px;     background-color: blue;     margin: 0 auto; &#125;
+2.text-align+display
+123456789101112.outer&#12 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/first-of-type%E5%A4%B1%E6%95%88%EF%BC%88%E5%AF%B9first-of-type%E7%9A%84%E9%94%99%E8%AF%AF%E7%90%86%E8%A7%A3%EF%BC%89/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/first-of-type%E5%A4%B1%E6%95%88%EF%BC%88%E5%AF%B9first-of-type%E7%9A%84%E9%94%99%E8%AF%AF%E7%90%86%E8%A7%A3%EF%BC%89/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">今天遇到了一个问题
+123456789101112131415&lt;div class=&quot;main&quot;&gt;        &lt;div class=&quot;xxx&quot;&gt;&lt;/div&gt;        &lt;div class=&quot;box&quot;&gt;            aaa            &lt;div class=&quot;box1&quot;&gt;                ddd            &lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;box&quot;&gt;            bbb        &lt;/div&gt;        &lt;div class=&quot;box&quot;&gt;            ccc        &lt;/div&gt;    &lt;/div&gt;
+如何选中.main中的第二个box首先不能使用:first-child,因为在.box前面有一个 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/hello-world/" title="Hello World">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/html+css+js_%E5%9D%9A%E6%8C%8130s%E5%B0%8F%E6%B8%B8%E6%88%8F/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/html+css+js_%E5%9D%9A%E6%8C%8130s%E5%B0%8F%E6%B8%B8%E6%88%8F/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">坚持30s小游戏用到：
+
+弹性运动
+拖拽事件
+碰撞检测
+定时器清除
+单对象编程
+
+123456789101112131415161718&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;Document&lt;/title&gt;    &lt;link rel=&quot;stylesheet&quot; href=&quot;./css/consist30s.css&quot;&gt;&lt;/head&gt;&lt;body&gt;    &lt;span&gt;游戏马上开始&lt;/span&gt;    &lt;div class=&quot;outer&quot;&gt;       ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/http%20%20https/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/http%20%20https/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">http  https什么是协议？网络协议是计算机之间为了实现网络通信而达成的一种“约定”或者”规则“，有了这种”约定“，不同厂商的生产设备，以及不同操作系统组成的计算机之间，就可以实现通信。
+什么是httphttp（超文本传输协议），运行在TCP&#x2F;IP协议（网络层协议）之上，是应用层协议，主要解决如何包装数据
+发展历史从上个世界90年代发布以来，http的版本主要有0.9、1.0、1.1、2.0、3.0
+具体有什么区别，可以参考我另一篇博客
+http报文上面已经说到http最主要的目的就是包装数据，他是通过http报文来把数据进行包装然后传递，http报文由首部，报文主体两个部分组成，首部和报文主体通过一行，报文结构如下，根据首部中的开始行不同分有请求报文和响应报文
+
+
+
+首部
+
+
+
+（空行）
+
+
+报文主体
+
+
+请求报文&#x2F;响应报文请求报文由三大部分组成，请求行，消息报头，请求正文
+响应报文也由三大部分组成，状态行，消息报头，响应正文
+常见状态码
+2XX（成功）
+200 成功获取服务器数据
+204 no content，请求成功，没有数据返回
+
+
+3XX（重定向）
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/js%E5%92%8Cjq%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/js%E5%92%8Cjq%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">js和jq动态添加和删除元素js部分:
+
+添加元素
+123var div = document.createElement(&#x27;div&#x27;);var test = document.getElementById(&#x27;test&#x27;);test.appendChild(div)
+删除元素
+123var div = document.getElementsByClassName(&#x27;divList&#x27;)[0];var test = document.getElementById(&#x27;test&#x27;);test.removeChild(div)
+jq部分
+
+结尾添加元素append()
+
+开头添加元素prepend()
+
+在某个元素前添加元素before()
+
+在某个元素之后添加元素after()
+
+删除元素remove()
+
+清空元素empty()
+
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/js%E5%AE%BD%E6%9D%BE%E6%AF%94%E8%BE%83%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%88x==y%EF%BC%89/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/js%E5%AE%BD%E6%9D%BE%E6%AF%94%E8%BE%83%E4%B8%AD%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%EF%BC%88x==y%EF%BC%89/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">js宽松比较中的类型转换（x&#x3D;&#x3D;y）
+字符串和数字之间的比较
+x是数字，y是字符串，返回x&#x3D;&#x3D;ToNumber(y)
+x是字符串，y是数字，返回ToNumber(x)&#x3D;&#x3D;y
+
+
+其他类型和布尔型之间的比较
+x是其他类型，y是布尔型，返回x&#x3D;&#x3D;ToNumber(y)
+x是布尔型，y是其他类型，返回ToNumber(x)&#x3D;&#x3D;y
+
+
+null和undefined之间的比较
+不论x，y的位置，都返回true
+
+
+对象和非对象之间的比较
+x是字符串或数字，y是对象，返回x&#x3D;&#x3D;Toprimitive(y)
+x是对象，y是字符串或数字，返回Toprimitive(x)&#x3D;&#x3D;y
+
+
+
+注意：在强转换过程中，[2].toString() ===2, [null].toString()===&quot;&quot;
+算法细节：
+ReturnIfAbrupt(x).
+ReturnIfAbrupt(y).
+If Type(x) is the same as Type(y), ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Larmy</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">79</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">15</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">6</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="聊聊加解密那些事" alt="聊聊加解密那些事"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="聊聊加解密那些事">聊聊加解密那些事</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:20:44">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">-前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Golang/"><span class="card-category-list-name">Golang</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/nodeJS/"><span class="card-category-list-name">nodeJS</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"><span class="card-category-list-name">杂七杂八</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Golang/" style="font-size: 17.5px; color: #999da3">Golang</a> <a href="/tags/JavaScript/" style="font-size: 20.5px; color: #99a5b6">JavaScript</a> <a href="/tags/Vue/" style="font-size: 16px; color: #999">Vue</a> <a href="/tags/Vue3/" style="font-size: 17.5px; color: #999da3">Vue3</a> <a href="/tags/element/" style="font-size: 16px; color: #999">element</a> <a href="/tags/hexo/" style="font-size: 17.5px; color: #999da3">hexo</a> <a href="/tags/http/" style="font-size: 19px; color: #99a1ac">http</a> <a href="/tags/nodeJS/" style="font-size: 19px; color: #99a1ac">nodeJS</a> <a href="/tags/typora/" style="font-size: 16px; color: #999">typora</a> <a href="/tags/websocket/" style="font-size: 16px; color: #999">websocket</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 22px; color: #99a9bf">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 17.5px; color: #999da3">后端</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 20.5px; color: #99a5b6">笔记</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 16px; color: #999">腾讯云</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px; color: #999">计算机网络</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">53</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">79</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/07/28 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Larmy</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi! Welcome to my blog!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  var subtitleEffect = true
+  fetch('https://api.btstu.cn/yan/api.php?charset=utf-8&encode=json',)
+    .then(function (res) {
+      return res.json()
+    })
+    .then(function (data) {
+      if (subtitleEffect) {
+        var sub = "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".length == 0 ? new Array() : "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".split(',')
+        var both = sub.unshift(data.text)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.text
+      }
+    })
+    .catch(function (err) {
+      console.error(err)
+    })
+}
+window.addEventListener('load', subtitleType)
+</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"log":false,"tagMode":false});</script></body></html>

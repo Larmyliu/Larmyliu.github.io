@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Larmy Blog | Larmy Blog</title><meta name="description" content="前端性能优化：细说浏览器渲染的重排与重绘前端性能优化因为涉及到计算机网络、数据算法、图形图像处理、浏览器渲染等多方面计算机知识，常作为前端工程师乐此不疲的技术讨论话题，也正因如此，它也是面试时容易被问及的面试题之一。 缘起 本篇文章缘起一次偶然的面试问答所引申出的思考整理，着笔于浏览器渲染的角度，探讨前端性能优化的思路和实践建议，当然，浏览器渲染是一个复杂的过程，本文笔者将围绕重排和重绘两个关键词"><meta name="author" content="Larmy"><meta name="copyright" content="Larmy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://larmyliu.github.io/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="Larmy Blog"><meta property="og:url" content="https://larmyliu.github.io/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/"><meta property="og:site_name" content="Larmy Blog"><meta property="og:description" content="前端性能优化：细说浏览器渲染的重排与重绘前端性能优化因为涉及到计算机网络、数据算法、图形图像处理、浏览器渲染等多方面计算机知识，常作为前端工程师乐此不疲的技术讨论话题，也正因如此，它也是面试时容易被问及的面试题之一。 缘起 本篇文章缘起一次偶然的面试问答所引申出的思考整理，着笔于浏览器渲染的角度，探讨前端性能优化的思路和实践建议，当然，浏览器渲染是一个复杂的过程，本文笔者将围绕重排和重绘两个关键词"><meta property="og:image" content="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg"><meta property="article:published_time" content="2024-06-30T06:14:33.989Z"><meta property="article:modified_time" content="2024-06-30T06:14:33.993Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="" href="https://larmyliu.github.io/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fcss%E6%8A%A5%E9%94%99_at-rule%20or%20selector%20expected/"><link rel="next" title="并发" href="https://larmyliu.github.io/%E5%B9%B6%E5%8F%91/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e96985cda5177be1671242c01ea37b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Larmy Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/head4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">79</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98"><span class="toc-number">1.</span> <span class="toc-text">前端性能优化：细说浏览器渲染的重排与重绘</span></a></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Larmy Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">无题</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2024-06-30</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2024-06-30 14:14:33"><i class="fas fa-history fa-fw"></i> 更新于 2024-06-30</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="前端性能优化：细说浏览器渲染的重排与重绘"><a href="#前端性能优化：细说浏览器渲染的重排与重绘" class="headerlink" title="前端性能优化：细说浏览器渲染的重排与重绘"></a><strong>前端性能优化：细说浏览器渲染的重排与重绘</strong></h1><p><img src= "/img/loading.gif" data-src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pbWcxLnN5Y2RuLmltb29jLmNvbS81YjU0M2JkYTAwMDE1Y2U0MDYyNDAyODkucG5n?x-oss-process=image/format,png" alt="图片描述"><br>前端性能优化因为涉及到计算机网络、数据算法、图形图像处理、浏览器渲染等多方面计算机知识，常作为前端工程师乐此不疲的技术讨论话题，也正因如此，它也是面试时容易被问及的面试题之一。</p>
+<p><strong>缘起</strong></p>
+<p>本篇文章缘起一次偶然的面试问答所引申出的思考整理，着笔于浏览器渲染的角度，探讨前端性能优化的思路和实践建议，当然，浏览器渲染是一个复杂的过程，本文笔者将围绕重排和重绘两个关键词开始行文。</p>
+<p><strong>目录结构</strong></p>
+<p>文章大致行文思路如下：</p>
+<ul>
+<li>URL从输入到页面展示的过程</li>
+<li>DOM和JavaScript的关系</li>
+<li>为什么操作DOM会很“慢”</li>
+<li>浏览器解析HTML的过程</li>
+<li>重排</li>
+<li>重绘</li>
+<li>优化方案</li>
+</ul>
+<p><strong>URL从输入到页面展示的过程</strong></p>
+<blockquote>
+<p>在探讨浏览器解析html之前，先了解url从输入到最后页面渲染的过程是一个很有必要的步骤，它可以帮助我们把握整体流程，让我们在了解HTML解析细节之前知道它处于整个请求周期中的哪一阶段，这对我们构建完善知识图谱很有帮助。</p>
+</blockquote>
+<p>首先，我们假设输入的url的请求为最简单的Http请求，以GET请求为例，大致分以下几个步骤：</p>
+<ol>
+<li>用户在浏览器的地址栏输入访问的URL地址。浏览器会先根据这个URL查看浏览器缓存-系统缓存-路由器缓存，若缓存中有，直接跳到第6步操作，若没有，则按照下面的步骤进行操作。</li>
+<li>浏览器根据输入的URL地址解析出主机名。</li>
+<li>浏览器将主机名转换成服务器ip地址。浏览器先查找本地DNS缓存列表，看缓存里面是否存在这个ip,如果有则进入第4步，如果缓存中不存在这个ip地址，就再向浏览器默认的DNS服务器发送查询请求，同时缓存当前这个ip到DNS缓存列表中。更详细步骤参考<a target="_blank" rel="noopener" href="http://www.cnblogs.com/xsilence/p/6035559.html">DNS查找域名的过程</a>。</li>
+<li>拿到ip地址后，浏览器再从URL中解析出端口号。</li>
+<li>拿到ip和端口后，浏览器会建立一条与目标Web服务器的TCP连接，也就是传说中的三次握手。传送门：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/xsilence/p/6034361.html">完整的tcp链接</a>。</li>
+<li>浏览器向服务器发送一条HTTP请求报文。</li>
+<li>服务器向浏览器返回一条HTTP响应报文。</li>
+<li>关闭连接 浏览器解析文档。</li>
+<li>如果文档中有资源则重复6、7、8动作，直至资源全部加载完毕。</li>
+</ol>
+<p>以上步骤简述了浏览器从输入url到最后页面呈现的大致过程，但这并不很具体，比如浏览器请求报文类型是什么，会遇到哪些错误场景、浏览器又是如何解析响应报文等等都没具体描述。</p>
+<blockquote>
+<p>实际上在http请求方式不同、有无代理、有无负载均衡等不同场景下访问服务器的细节流程也会有一些差别，但这并不影响我们对整个访问环节的理解，有兴趣的同学可网上自行详细了解，在此不做详述。</p>
+</blockquote>
+<p><strong>DOM和JavaScript的关系</strong></p>
+<p>文档对象模型（DOM）是一个独立于语言，用于操作XML和HTML文档的API,在web端，我们常用来操作HTML，但其实DOM也是可以操作XML文档的。</p>
+<p>我们现在知道，DOM是一个独立于语言的API，换句话说，DOM是一个与语言无关的API，别的语言也可以实现操作DOM的具体api，但是它在浏览器中是用JavaScript来实现的，也因此，DOM是现在JavaScript编码中很重要的一部分，因为JavaScript很多时候都在操作底层文档。</p>
+<p><strong>为什么操作DOM会很慢</strong></p>
+<p>虽然DOM是由JavaScript实现的，但是在浏览器中都是把DOM和JavaScript分开来实现的，比如IE中，JavaScript的实现名为JScript，放在jscript.dll文件中，而DOM则放在另一个叫做mshtml.dll的库中。在Safari中，DOM和渲染是使用Webkit中的WebCore实现，而JavaScript是由独立的JavaScriptCore引擎实现，同样在Chrome中，同样是使用WebCore来实现渲染，而JavaScript引擎则是他们自己研发的V8引擎。</p>
+<p>由于DOM和JavaScript是被分开独立实现的，因此，每一次在通过js操作DOM的时候，就需要先去连接js和DOM，我们可以这样理解：把DOM和JavaScript比作两个岛，他们之间通过一个收费的桥连接着，每一次访问DOM的时候，就需要经过这座桥，并且给“过路费”，访问的次数越多，路费就会越高，并且访问到DOM后，操作具体的DOM还需要给“操作费”，由于浏览器访问DOM的操作很多，因此，“路费”和“操作费”自然会增加，这就是为什么操作DOM会很慢的原因</p>
+<p><strong>浏览器渲染HTML的步骤</strong></p>
+<p>HTML渲染大致分为如下几步：</p>
+<ol>
+<li>HTML被HTML解析器解析成DOM Tree, css则被css解析器解析成CSSOM Tree。</li>
+<li>DOM Tree和CSSOM Tree解析完成后，被附加到一起，形成渲染树（Render Tree）。</li>
+<li>节点信息计算(重排)，这个过程被叫做Layout(Webkit)或者Reflow(Mozilla)。即根据渲染树计算每个节点的几何信息。</li>
+<li>渲染绘制(重绘)，这个过程被叫做(Painting 或者 Repaint)。即根据计算好的信息绘制整个页面。</li>
+</ol>
+<p>以上4步简述浏览器的一次渲染过程，理论上，每一次的dom更改或者css几何属性更改，都会引起一次浏览器的重排&#x2F;重绘过程，而如果是css的非几何属性更改，则只会引起重绘过程。所以说重排一定会引起重绘，而重绘不一定会引起重排。</p>
+<p><strong>重排（Relayout&#x2F;Reflow）</strong></p>
+<p>在弄明白什么是重排之前，我们要知道：浏览器渲染页面默认采用的是流式布局模型（Flow Based Layout），这一点很重要。</p>
+<p>所谓重排，实际上是根据渲染树中每个渲染对象的信息，计算出各自渲染对象的几何信息（DOM对象的位置和尺寸大小），并将其安置在界面中的正确位置。</p>
+<p>由于浏览器渲染界面是基于流式布局模型的，也就是某一个DOM节点信息更改了，就需要对DOM结构进行重新计算，重新布局界面，再次引发回流，只是这个结构更改程度会决定周边DOM更改范围，即全局范围和局部范围，全局范围就是从根节点<code>html</code>开始对整个渲染树进行重新布局，例如当我们改变了窗口尺寸或方向或者是修改了根元素的尺寸或者字体大小等；而局部布局可以是对渲染树的某部分或某一个渲染对象进行重新布局。</p>
+<p>在此，总结会引起重排的操作有：</p>
+<ol>
+<li>页面首次渲染。</li>
+<li>浏览器窗口大小发生改变。</li>
+<li>元素尺寸或位置发生改变。</li>
+<li>元素内容变化（文字数量或图片大小等等）。</li>
+<li>元素字体大小变化。</li>
+<li>添加或者删除可见的DOM元素。</li>
+<li>激活CSS伪类（例如：:hover）。</li>
+<li>设置style属性</li>
+<li>查询某些属性或调用某些方法。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">常见引起重排属性和方法</th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">width</td>
+<td align="left">height</td>
+<td align="left">margin</td>
+<td align="left">padding</td>
+</tr>
+<tr>
+<td align="left">display</td>
+<td align="left">border</td>
+<td align="left">position</td>
+<td align="left">overflow</td>
+</tr>
+<tr>
+<td align="left">clientWidth</td>
+<td align="left">clientHeight</td>
+<td align="left">clientTop</td>
+<td align="left">clientLeft</td>
+</tr>
+<tr>
+<td align="left">offsetWidth</td>
+<td align="left">offsetHeight</td>
+<td align="left">offsetTop</td>
+<td align="left">offsetLeft</td>
+</tr>
+<tr>
+<td align="left">scrollWidth</td>
+<td align="left">scrollHeight</td>
+<td align="left">scrollTop</td>
+<td align="left">scrollLeft</td>
+</tr>
+<tr>
+<td align="left">scrollIntoView()</td>
+<td align="left">scrollTo()</td>
+<td align="left">getComputedStyle()</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">getBoundingClientRect()</td>
+<td align="left">scrollIntoViewIfNeeded()</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>重排也叫回流，实际上，reflow的字面意思也是回流，之所以有的叫做重排，也许是因为重排更好理解，更符合中国人的思维。标准文档之所以叫做回流（Reflow）,是因为浏览器渲染是基于“流式布局”的模型，流实际就使我们常说的文档流，当dom或者css几何属性发生改变的时候，文档流会受到波动联动的去更改，流就好比一条河里的水，回流就好比向河里扔了一块石头，激起涟漪，然后引起周边水流受到波及，所以叫做回流，这样理解似乎更标准更规范，不过叫什么并不重要，重要的是我们真正理解了这个过程便好。</p>
+</blockquote>
+<p><strong>重绘（Repainting）</strong></p>
+<p>相比重排，重绘就简单多了，所谓重绘，就是当页面中元素样式的改变并不影响它在文档流中的位置时，例如更改了字体颜色,浏览器会将新样式赋予给元素并重新绘制的过程称。</p>
+<p>常见引起浏览器绘制过程的属性包含：</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">color</td>
+<td align="left">border-style</td>
+<td align="left">visibility</td>
+<td align="left">background</td>
+</tr>
+<tr>
+<td align="left">text-decoration</td>
+<td align="left">background-image</td>
+<td align="left">background-position</td>
+<td align="left">background-repeat</td>
+</tr>
+<tr>
+<td align="left">outline-color</td>
+<td align="left">outline</td>
+<td align="left">outline-style</td>
+<td align="left">border-radius</td>
+</tr>
+<tr>
+<td align="left">outline-width</td>
+<td align="left">box-shadow</td>
+<td align="left">background-size</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p><strong>性能优化</strong></p>
+<p>我们知道操作DOM是一个高成本的操作，不仅是因为本身js与DOM的链接访问，还包括操作DOM后悔引起一连串的连锁反应（重排），因此，从性能优化角度，我们可以从以下几个方面着手：</p>
+<ul>
+<li>减少DOM操作<ul>
+<li>最小化DOM访问次数，尽量缓存访问DOM的样式信息，避免过度触发回流。</li>
+<li>如果在一个局部方法中需要多次访问同一个dom，则先暂存它的引用。</li>
+</ul>
+</li>
+<li>采用更优的API替代消费高的api，转换优化消费高的集合<ul>
+<li>用querySelectorAll()替代getElementByXX()。</li>
+<li>开启动画的GPU加速，把渲染计算交给GPU。</li>
+<li>少用HTML集合（类数组）来遍历，因为集合遍历比真数组遍历耗费更高。</li>
+<li>用事件委托来减少事件处理器的数量。</li>
+</ul>
+</li>
+<li>减少重排<ul>
+<li>避免设置大量的style属性，因为通过设置style属性改变结点样式的话，每一次设置都会触发一次reflow，所以最好是使用class属性</li>
+<li>实现元素的动画，它的position属性，最好是设为absoulte或fixed，这样不会影响其他元素的布局</li>
+<li>动画实现的速度的选择。比如实现一个动画，以1个像素为单位移动这样最平滑，但是reflow就会过于频繁，大量消耗CPU资源，如果以3个像素为单位移动则会好很多。</li>
+<li>不要使用table布局，因为table中某个元素旦触发了reflow，那么整个table的元素都会触发reflow。那么在不得已使用table的场合，可以设置table-layout:auto;或者是table-layout:fixed这样可以让table一行一行的渲染，这种做法也是为了限制reflow的影响范围</li>
+</ul>
+</li>
+<li>css及动画处理<ul>
+<li>少用css表达式</li>
+<li>减少通过JavaScript代码修改元素样式，尽量使用修改class名方式操作样式或动画；</li>
+<li>动画尽量使用在绝对定位或固定定位的元素上；</li>
+<li>隐藏在屏幕外，或在页面滚动时，尽量停止动画；</li>
+</ul>
+</li>
+</ul>
+<p><strong>最后总结</strong></p>
+<p>本篇文章主要抓取url从输入到最后渲染成界面这一流程中的浏览器解析渲染HTML这一步骤来探讨前端优化的思路和原因，核心思想基于重排和重绘的关系来展开讨论，主题大致有如下几点：</p>
+<ul>
+<li>url从输入到最后渲染的大致环节。</li>
+<li>重排一定会重绘，重绘不一定有重排。</li>
+<li>Js操作DOM是一个高消费过程。</li>
+<li>会引起重排&#x2F;重绘的属性和方法列举</li>
+<li>优化思路（减少dom操作、替换高性能api、暂存引用、减少重排、开启硬件加速等）。</li>
+</ul>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Larmy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://larmyliu.github.io/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/">https://larmyliu.github.io/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%9A%E7%BB%86%E8%AF%B4%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E7%9A%84%E9%87%8D%E6%8E%92%E4%B8%8E%E9%87%8D%E7%BB%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://larmyliu.github.io" target="_blank">Larmy Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8Fcss%E6%8A%A5%E9%94%99_at-rule%20or%20selector%20expected/"><img class="prev-cover" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/%E5%B9%B6%E5%8F%91/"><img class="next-cover" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">并发</div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="lv-container" data-id="city" data-uid="MTAyMC81MTE2NS8yNzY0Ng"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Larmy</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi! Welcome to my blog!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"log":false,"tagMode":false});</script></body></html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Larmy Blog</title><meta name="description"><meta name="author" content="Larmy"><meta name="copyright" content="Larmy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://larmyliu.github.io/page/3/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Larmy Blog"><meta property="og:url" content="https://larmyliu.github.io/page/3/"><meta property="og:site_name" content="Larmy Blog"><meta property="og:description"><meta property="og:image" content="https://larmyliu.github.io/img/head4.jpg"><meta property="article:published_time" content="2024-06-30T06:36:18.761Z"><meta property="article:modified_time" content="2024-06-30T06:36:18.761Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e96985cda5177be1671242c01ea37b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Larmy Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/head4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">79</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/07/29/368C4ibegMGjnDN.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Larmy Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Larmy Blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JavaScript%E4%B9%8Binstanceof%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E4%B9%8Binstanceof%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript之instanceof底层原理instanceof可以用来判断某个实例是否属于某个它的父类型，也可以判断某个引用是否属于某个构造函数
+instanceof底层是怎么工作的12345678910111213function _instanceof(L,R)&#123;	let R_prototype = R.prototype;    let L_proto = L.__proto__;    while(true)&#123;		if(L_proto === null)&#123;			return false;        &#125;        if(L_proto === R_prototype)&#123;			return true;        &#125;        L_proto = L_proto.__proto__;    &#125;&#125;
+
+测试一下
+12345678910111213141516171819202122232425262728293031323334function Person(name,age,sex) ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JavaScript%E4%B9%8B%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E4%B9%8B%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript之原型和原型链在JavaScript的学习过程中，原型链肯定是一个很重要的知识点，下面我们就来深入的去看一下原型链
+原型首先看一个很简单的例子
+12345678910111213141516function Person(name, age) &#123;            this.name = name;            this.age = age;            this.sayName = function () &#123;                console.log(&quot;i am &quot;+this.name);            &#125;        &#125;        Person.prototype.sayAge = function () &#123;            console.log(&quot;i am &quot;+this.age);        &#125;        var person1 = new Person(&quot;ljm&quot;,18)   ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JavaScript%E4%B9%8B%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%88EC%EF%BC%89/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E4%B9%8B%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%88EC%EF%BC%89/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript之执行上下文（EC）在JavaScript中，执行上下文是一个基本概念，在执行上下文中，包括了变量对象（VO，Variable Object），作用域链（Scope Chain），this指向等，在闭包，函数&#x2F;变量提升息息相关
+执行上下文执行上下文可以理解为执行环境，执行环境定义了变量或者函数有权访问其他数据，决定他们各自的行为，执行环境主要包括了全局上下文，函数上下文，eval执行上下文。主要理解的是全局上下文和函数上下文。
+在JavaScript代码执行的过程中，首先进入的就是全局环境，每个函数都有自己的执行环境。所以我们分别叫他们全局上下文和函数上下文
+如何执行执行上下文是以栈的方式被存放起来的，称这个栈为执行上下文栈。
+在JavaScript代码开始执行时，将全局上下文创建并入栈，当调用函数时，会进入对应函数的环境，创建函数上下文并入栈，当栈顶的执行上下文代码执行完毕后，则将其出栈。
+一个简单的例子
+12345678function fn2() &#123;  console.log(&#x27;fn2&#x27;)&#125;function f ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JavaScript%E4%B9%8B%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0new/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E4%B9%8B%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0new/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript之模拟实现newnew是JavaScript的一个关键字，可以实例化构造函数
+1234567891011function Person(name,age) &#123;	this.name = name;    this.age = age;&#125;Person.prototype.sayHi = function() &#123;    console.log(&quot;HI! i am &quot; + this.name);&#125;var person1 = new Person(&quot;ljm&quot;, 18);console.log(person1.age);//18person1.sayHi();//HI! i am ljmperson1.__proto__ === Person.prototype;//true
+
+从这个例子可以看出
+
+new可以实例化一个对象
+这个对象可以访问构造函数的属性
+这个对象可以访问构造函数原型上的属性
+对象的__proto__指向构造函数的原型
+
+我们来模拟一下new的方法
+1234567891011121 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JavaScript%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E4%B9%8B%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript之深浅拷贝了解一下JavaScript中的深浅拷贝，以及他们的手写版
+数据类型首先肯定要知道的是JavaScript的数据类型，JavaScript的数据类型可以分为两大类基本数据类型，引用数据类。
+基本数据类型
+Number
+Boolean
+String
+Null
+Undefined
+Symbol
+Bigint
+
+引用数据类型
+Function
+Object
+Array
+
+了解完JavaScript拥有的数据类型后，来看看深浅拷贝
+浅拷贝简单的来说就是，基本数据类型完全拷贝他们的数据，引用数据类型就拷贝内存地址
+实现
+Object.assign()
+12345678910111213141516var obj = &#123;	name: &#x27;ljm&#x27;,    age: 18,    like:&#123;		first: &quot;sleep&quot;    &#125;&#125;var obj1 = Object.assign(&#123;&#125;,obj)console.log(obj1.name)//ljmconsole.log ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JavaScript%E4%B9%8B%E9%97%AD%E5%8C%85%E7%90%86%E8%A7%A3/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E4%B9%8B%E9%97%AD%E5%8C%85%E7%90%86%E8%A7%A3/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript之闭包理解闭包（Closure）是JavaScript学习过程中一个非常重要的问题
+闭包和执行上下文和作用域链有着千丝万缕的关系。闭包是指有权访问另一个函数作用域的变量的函数（JavaScript高级程序设计（第三版）P178）
+闭包是一个函数，对闭包的一个理解可以是所在的执行上下文已经出栈,但是仍然访问了其所在的执行上下文变量对象的函数
+这里所指的所在的执行上下文指的是闭包函数对应的执行上下文，而不是闭包本省所对应的执行上下文
+来一个简单的例子
+12345678function A()&#123;	var a = 2;    function B()&#123;		console.log(a);    &#125;    return B;&#125;A()();
+
+那么他的执行上下文栈行为是这样的
+12345678910111213/*伪代码*/// 代码执行时最先进入全局环境，全局上下文被创建并入栈ECStack.push(globalContext);// A 被调用，A 函数上下文被创建并入栈ECStack.push(&lt;A&gt; functionC ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JavaScript%E4%B9%8B%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E4%B9%8B%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript之防抖节流我记得比软设的时候师兄问有没有使用防抖函数或节流函数，当时了解但是没用，过了将近一年，有些知识都忘了，痛定思痛，赶紧补上。
+
+防抖函数（debounce）在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+这个描述就可以知道他的使用场景：输入框校验，手机号、邮箱验证输入检测，防误触
+防抖一般情况下，我们肯定是和Ajax结合，用于和后端进行数据交互，如果频繁的发起Ajax请求，那么无疑会造成很多资源上的浪费
+123456789101112131415161718192021222324&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;防抖节流&lt;/ ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JavaScript%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E8%A7%A3%E9%87%8A/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E8%A7%A3%E9%87%8A/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">JavaScript内存管理解释很多时候，对于JavaScript开发者可能对内存管理毫无了解，毕竟JavaScript引擎帮你解决了这个问题
+从一方面来说，你会遇到类似于内存泄露的问题，只有你知道内存是怎么样工作的，你才能解决这个问题
+在这篇文章，我会向你介绍如何分配内存和垃圾处理，同时，如何去避免普通的内存泄露
+内存生命周期在JavaScript中，当我们创建一个变量，函数，或者任何一个你可以想到的数据类型，JS引擎会为这些分配内存，当你再也不使用这些数据类型时，JS引擎会释放掉这些内存
+内存分配是在内存中保留空间的过程，在释放内存的同时释放空间，以便用于其他目的。
+每次我们分配一个变量或者创建一个函数，内存总是经过以下几个相同的状态
+
+
+分配内存
+JavaScript非常照顾我们：他为我们创建的对象进行内存分配
+
+使用内存
+使用内存是我们在代码中明确做的事情：读和写对于内存而已不过是对变量的读写
+
+释放内存
+这一步同样是JavaScript引擎帮我们处理好了的。一旦分配的内存被释放了，释放出来的内存可以被用作新的目的
+
+
+
+在内存管理上下文中，对象不仅包括JS对象，还包括函数和函 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JavaScript%EF%BC%9Asort()%E6%8E%92%E5%BA%8F%E4%B8%8D%E6%AD%A3%E7%A1%AE/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/JavaScript%EF%BC%9Asort()%E6%8E%92%E5%BA%8F%E4%B8%8D%E6%AD%A3%E7%A1%AE/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">在JavaScript中，数组使用sort()后发现有排序不正确的情况排序前var a = [10,6,6,10,10,9,8,8,3,3,8,2,1,5,1,9,5,2,7,4,7,7]排序后很明显排序不正确查阅资料后，数组元素首先会被转换为字符，例如1变成&quot;1&quot;,之后会根据Unicode编码的顺序来进行排序，所以这就是为什么10排到了2前面解决方法是，指定好compareFunction
+12345678910a.sort(function (a,b) &#123;            if (a &lt; b ) &#123;                    return -1;            &#125;            if (a &gt; b ) &#123;                return 1;            &#125;            // a must be equal to b            return 0;        &#125;);
+这样排序后就没有问题了
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/Sass%EF%BC%88Scss%EF%BC%89%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/Sass%EF%BC%88Scss%EF%BC%89%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">Sass（Scss）简单认识我个人平时比较常使用的是Less，但是公司前端开发是在Vue中用Sass，为了统一一下语言，所以学习一下Sass。
+简单介绍Sass和Less一样是Css的预处理器，相比于Css需要重复写大量重复的样式，Sass和Less的好处可以节省大量重复的代码操作，可以通过嵌套样式代码，父子节点之间的关系更加明确，同时还有引入变量，循环，函数等
+Sass Or Scss其实在官网显示的是sass，但是我们在vue中通常写的是lang = &#39;scss&#39;,其实两个比没有太大的区别，简言之可以理解scss是sass的一个升级版本，完全兼容sass之前的功能，又有了些新增能力。语法形式上有些许不同，最主要的就是sass是靠缩进表示嵌套关系，scss是花括号。
+联系平台https://www.sassmeister.com/（可以在线将sass转换成css）
+基本用法变量变量声明用$，优先使用的是局部变量
+1234567$n: 10;p&#123;   $i: 100px;   $n: 1000px;   width: $n px;   height: $i p ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Larmy</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">79</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">15</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">6</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="聊聊加解密那些事" alt="聊聊加解密那些事"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="聊聊加解密那些事">聊聊加解密那些事</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:20:44">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">-前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Golang/"><span class="card-category-list-name">Golang</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/nodeJS/"><span class="card-category-list-name">nodeJS</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"><span class="card-category-list-name">杂七杂八</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Golang/" style="font-size: 17.5px; color: #999da3">Golang</a> <a href="/tags/JavaScript/" style="font-size: 20.5px; color: #99a5b6">JavaScript</a> <a href="/tags/Vue/" style="font-size: 16px; color: #999">Vue</a> <a href="/tags/Vue3/" style="font-size: 17.5px; color: #999da3">Vue3</a> <a href="/tags/element/" style="font-size: 16px; color: #999">element</a> <a href="/tags/hexo/" style="font-size: 17.5px; color: #999da3">hexo</a> <a href="/tags/http/" style="font-size: 19px; color: #99a1ac">http</a> <a href="/tags/nodeJS/" style="font-size: 19px; color: #99a1ac">nodeJS</a> <a href="/tags/typora/" style="font-size: 16px; color: #999">typora</a> <a href="/tags/websocket/" style="font-size: 16px; color: #999">websocket</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 22px; color: #99a9bf">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 17.5px; color: #999da3">后端</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 20.5px; color: #99a5b6">笔记</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 16px; color: #999">腾讯云</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px; color: #999">计算机网络</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">53</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">79</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/07/28 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Larmy</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi! Welcome to my blog!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  var subtitleEffect = true
+  fetch('https://api.btstu.cn/yan/api.php?charset=utf-8&encode=json',)
+    .then(function (res) {
+      return res.json()
+    })
+    .then(function (data) {
+      if (subtitleEffect) {
+        var sub = "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".length == 0 ? new Array() : "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".split(',')
+        var both = sub.unshift(data.text)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.text
+      }
+    })
+    .catch(function (err) {
+      console.error(err)
+    })
+}
+window.addEventListener('load', subtitleType)
+</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"log":false,"tagMode":false});</script></body></html>

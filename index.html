@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Larmy Blog</title><meta name="description"><meta name="author" content="Larmy"><meta name="copyright" content="Larmy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://larmyliu.github.io/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Larmy Blog"><meta property="og:url" content="https://larmyliu.github.io/"><meta property="og:site_name" content="Larmy Blog"><meta property="og:description"><meta property="og:image" content="https://larmyliu.github.io/img/head4.jpg"><meta property="article:published_time" content="2024-06-30T06:36:18.755Z"><meta property="article:modified_time" content="2024-06-30T06:36:18.755Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e96985cda5177be1671242c01ea37b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Larmy Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/head4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">79</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/07/29/368C4ibegMGjnDN.png)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Larmy Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Larmy Blog</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="聊聊加解密那些事">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="聊聊加解密那些事"></a></div><div class="recent-post-info"><a class="article-title" href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="聊聊加解密那些事">聊聊加解密那些事</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:20:44"><i class="far fa-calendar-alt"></i>2024-06-30</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/Golang/">Golang</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%90%8E%E7%AB%AF/">后端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Golang/">Golang</a></span></div><div class="content">聊聊加解密那些事什么是加解密顾名思义我可以通过一个特定的加密方式，让原先的程序员们最爱的明文123456，变成别人看不懂的U2FsdGVxxx，再通过一个特定的解密方式来把数据变回123456。
+加密方式加密又分为对称加密和非对称加密，我们下面详细说一下这两种加密方式。
+对称加密对称加密可以简单理解为，我现在有一把钥匙🔑，我发送信息之前通过这把钥匙进行加密，如果有人给我发送加密信息，我也可以用这把钥匙来进行解密
+
+对称加密主要涉及到以下三种算法
+
+**AES (Advanced Encryption Standard)**：AES是一种对称加密标准，支持128，192和256位密钥长度。AES加密过程包括多轮的重复和置换。每一轮使用的都是同样的加密密钥，这也就是为什么它被称为对称加密算法。
+**DES (Data Encryption Standard)**：尽管受到批评因为它的56位密钥容易受到穷举攻击，DES在很长一段时间里仍然是行业标准。DES使用的是分组加密方式，数据被分成64位的块，然后按照密钥加密。
+**3DES (Triple DES)**：为了铺平DES的不足，3DE ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">最近打开vscode，老是有这样一句提示原因是我安装了一个叫background的拓展，并且编辑器的标题栏会显示不受支持四个字那么如何解决1.下载一个叫Fix VSCode Checksums的拓展2.ctrl+shift+P打开命令面板3.输入Fix Checksums: Apply4.重启vscode即可
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">刚接触小程序，发现在引入iconfont图标，原来是彩色的图标变成了纯色这是引入小程序内的显示这是在iconfont上的图标我引用的方法是在iconfont上在线生成css，将里面的css复制直接粘贴到wxss就会出现这样的情况
+原来小程序对应font-class不支持多色
+
+
+
+引用方法名
+支持多色
+兼容性
+
+
+
+unicode
+×
+好
+
+
+font-class
+×
+良好
+
+
+symbol
+√
+差
+
+
+mini-program-iconfont-cli(微信小程序解决方案)把iconfont图标批量转换成多个平台小程序的组件。不依赖字体，支持多色彩。
+
+在工作的根目录打开cmd，输入
+
+1npm install mini-program-iconfont-cli --save-dev
+2.输入命令，生成iconfont.json文件
+1npx iconfont-init
+3.打开json文件，将symbol_url替换成iconfont项目生成的js
+4.输入命令生成icon文件夹
+1npx iconfont-wechat
+5.app.json中引入iconfont组件在你需要用到彩 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">思维导图链接
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">今天在用webpack打包文件时报错
+12345ERROR in ./src/img/head4.jpg 1:0Module parse failed: Unexpected character &#x27;�&#x27; (1:0)You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders(Source code omitted for this binary file) @ ./src/js/ebtry.js 4:11-38
+提示有不希望出现的错误字符
+查阅资料1.检查自己的file-loader和url-loader是否下载正确
+检查下载都正确看看自己写的webpack.config.js我在写的时候写成了
+1&#123;test:/.(png | jpg | gif | svg)$/, use:[&#x27;url- ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%EF%BC%88git%EF%BC%89Failed%20to%20connect%20to%20127.0.0.1%20port%2050462_%20Connection%20refused/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%EF%BC%88git%EF%BC%89Failed%20to%20connect%20to%20127.0.0.1%20port%2050462_%20Connection%20refused/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">想利用hexo搭建一个个人博客，但是发现hexo init的时候一直被refused了。但是在git里面查了git config --global http.proxy并没有显示我有用代理查了端口号什么的都显示没有
+最后，找到一个方法在电脑查找.gitconfig文件，要在c盘的那个，点开来把proxy全部删掉，再hexo init 就成功了
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E7%AD%94%E8%BE%A9%E6%95%B4%E7%90%86/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E7%AD%94%E8%BE%A9%E6%95%B4%E7%90%86/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">答辩整理魔方是如何建模的
+这里主要使用到是three.js技术，第一步是画外形，虽然外观上看上去是一个大的正方体，但其实是做了26个小正方体拼接而成，期间会记录给一个小正方体的坐标位置，最后加上黑色边框，在浏览器上渲染出来。第二步是操控魔方视角，虽然说魔方已经在浏览器渲染出来了，但是因为无法操控空间视角，只能看到魔方的某一个面，这时候要加上three.js提供的视角控制库，我这里用的是轨道空间库，完成视角空间库的初始化，就可以观察到魔方的每一个面，整体就会出现一个3D的效果。最后一步就是监听鼠标事件，达到转动魔方的效果。
+
+转动魔方是如何实现的
+首先确定触摸点，通过监听鼠标事件操作就可以获得一个平面2D的XY坐标，然后就是通过一个平面2D坐标映射成为3D坐标的问题，这时需要引用three.js提供的Raycaster，原理就是在点击的位置和相机的位置发送一条射线，被这根射线射中的物体都被记录下来，这样就可以知道在三维空间中鼠标移过了什么物体。接下来确定转动方向，根据xyz正负轴分为六个方向，根据滑动的两点确定转动向量，然后判断转动向量和这六个方向向量夹角最小的方向即为转动方向，之后根据 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E7%BA%AF%E5%89%8D%E7%AB%AF%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E6%88%98/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E7%BA%AF%E5%89%8D%E7%AB%AF%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E6%88%98/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">纯前端微信小程序实战最近在学习微信小程序开发，记录一下我的第一次纯前端小程序开发（无后台操作），也可以分享给还未开发过微信小程序，想找一个微信小程序的项目练习的朋友们，附上github地址：github地址https://github.com/Larmyliu/wechat_program一、先建立一个微信小程序项目要先在微信开放平台注册，拿到AppID，不拿AppID也可以开发小程序，但是有很多接口无法调用二、下载微信开发者工具三、在项目中新建小程序项目这里我就遇到了一个坑，在勾选的时候勾选了云开发，结果在里面一脸懵逼，没有后台经验的朋友不需要勾选
+四、敲代码，调api
+项目描述：1.是对ofo自行车的小程序模拟开发2.对页面进行简单的逻辑处理（主要还是查找微信官方api）注意：因为里面有一个要获取单车的密码和车牌号，所以前端可以直接mock假数据，通过链接访问假数据的地址，我是在eolinker上创建的假数据同时也要在微信开放平台中添加服务器域名，添加上后要在微信开发者工具内更新配置总结：具体的代码内容可以上github上下载clone，微信其实把很多组件都已经封装好了，而且有很多 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/%E8%A1%A8%E5%8D%95%E8%BE%93%E5%85%A5%E5%BB%B6%E8%BF%9F%E4%BC%98%E5%8C%96/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E8%A1%A8%E5%8D%95%E8%BE%93%E5%85%A5%E5%BB%B6%E8%BF%9F%E4%BC%98%E5%8C%96/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:34"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">表单输入延迟优化问题描述在控制台埋点管理新增数据表中，可以新建大量字段名，当字段条数较少时（少于20个左右），输入延迟感并不强烈，但一次性创建条数较多时，会出现明显延迟感
+
+（持续输入过程）
+抓包分析
+
+（抓包分析）
+抓包分析后发现在输入的过程中不断的在触发Vue_render和Vue_update
+优化在原代码中，根据条目数通过v-for循环生成四个el-form-item表单列表项，因为直接挂载在组件根部，所以每次添加都需要从组件根部开始深度遍历，从而导致输入延迟
+
+解决那么解决方案就是最小化组件，最好不要在一个vue组件上直接绑定过多的数据，如果有大量数据请分多个组件绑定，减小当前组件绑定的数据量，将上述代码提取成组件
+优化结果优化后输入延迟感明显降低
+
+
+总结vue提倡最小化组件，当组件数据量过大时要考虑拆分组件，减小组件数据过大而导致深度递归时间过长，造成感官上延迟
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/%E6%89%B9%E6%94%B9%E7%BD%91%E4%BF%AE%E6%94%B9%E7%A6%81%E6%AD%A2%E7%B2%98%E8%B4%B4%E5%88%B0%E5%8F%AF%E7%B2%98%E8%B4%B4/" title="无题">     <img class="post_bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/%E6%89%B9%E6%94%B9%E7%BD%91%E4%BF%AE%E6%94%B9%E7%A6%81%E6%AD%A2%E7%B2%98%E8%B4%B4%E5%88%B0%E5%8F%AF%E7%B2%98%E8%B4%B4/" title="无题">无题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt"></i>2024-06-30</time></div><div class="content">方法一：
+
+打开一篇禁止粘贴的作文 2.打开f12控制台，点击这个小按钮（我这是Google浏览器）3.把鼠标放到这个输入作文的框上，旁边的element或对应到这个textarea文本域4.右键点击这个标签，选Edit as HTML5.在两个标签内放入作文即可方法二：1.还是上面步骤一到步骤三，找到&lt;textarea&gt;&lt;/textarea&gt;这个标签，看它的id号，这里的id是contents2.在console控制台输入3.就可以复制粘贴了
+
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head4.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Larmy</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">79</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">15</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">6</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Larmyliu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:liuarmyl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="聊聊加解密那些事" alt="聊聊加解密那些事"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%81%8A%E8%81%8A%E5%8A%A0%E8%A7%A3%E5%AF%86%E9%82%A3%E4%BA%9B%E4%BA%8B/" title="聊聊加解密那些事">聊聊加解密那些事</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:20:44">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3Vscode%E6%8F%90%E7%A4%BAcode%E5%AE%89%E8%A3%85%E4%BC%BC%E4%B9%8E%E6%8D%9F%E5%9D%8F/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%A7%A3%E5%86%B3%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%95%E5%85%A5iconfont%EF%BC%8C%E5%BD%A9%E8%89%B2%E5%9B%BE%E6%A0%87%E5%8F%98%E7%BA%AF%E8%89%B2/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div><div class="aside-recent-post"><a href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="无题" alt="无题"/></div><div class="aside-post-title"><div class="aside-post_title" href="/%E9%94%99%E8%AF%AF_Module%20parse%20failed_%20Unexpected%20character%20'%EF%BF%BD'%20(1_0)%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="无题">无题</div><time class="aside-post_meta post-meta__date" title="发表于 2024-06-30 14:14:34">2024-06-30</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">-前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Golang/"><span class="card-category-list-name">Golang</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/nodeJS/"><span class="card-category-list-name">nodeJS</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"><span class="card-category-list-name">杂七杂八</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Golang/" style="font-size: 17.5px; color: #999da3">Golang</a> <a href="/tags/JavaScript/" style="font-size: 20.5px; color: #99a5b6">JavaScript</a> <a href="/tags/Vue/" style="font-size: 16px; color: #999">Vue</a> <a href="/tags/Vue3/" style="font-size: 17.5px; color: #999da3">Vue3</a> <a href="/tags/element/" style="font-size: 16px; color: #999">element</a> <a href="/tags/hexo/" style="font-size: 17.5px; color: #999da3">hexo</a> <a href="/tags/http/" style="font-size: 19px; color: #99a1ac">http</a> <a href="/tags/nodeJS/" style="font-size: 19px; color: #99a1ac">nodeJS</a> <a href="/tags/typora/" style="font-size: 16px; color: #999">typora</a> <a href="/tags/websocket/" style="font-size: 16px; color: #999">websocket</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 22px; color: #99a9bf">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 17.5px; color: #999da3">后端</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 20.5px; color: #99a5b6">笔记</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 16px; color: #999">腾讯云</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 16px; color: #999">计算机网络</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">53</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/10/"><span class="card-archive-list-date">十月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item more is-center"><a class="card-archive-list-link-more" href="/archives">
+              <span>查看更多</span><i class="fas fa-angle-right"  ></i></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">79</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" publish_date="2020/07/28 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Larmy</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi! Welcome to my blog!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  var subtitleEffect = true
+  fetch('https://api.btstu.cn/yan/api.php?charset=utf-8&encode=json',)
+    .then(function (res) {
+      return res.json()
+    })
+    .then(function (data) {
+      if (subtitleEffect) {
+        var sub = "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".length == 0 ? new Array() : "这个世界上的每一个人 都应该去做自己想做的事 不虚度上天所赐的年华岁月".split(',')
+        var both = sub.unshift(data.text)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.text
+      }
+    })
+    .catch(function (err) {
+      console.error(err)
+    })
+}
+window.addEventListener('load', subtitleType)
+</script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"log":false,"tagMode":false});</script></body></html>

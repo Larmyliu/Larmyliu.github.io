@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Larmy Blog | Larmy Blog</title><meta name="description" content="http  https什么是协议？网络协议是计算机之间为了实现网络通信而达成的一种“约定”或者”规则“，有了这种”约定“，不同厂商的生产设备，以及不同操作系统组成的计算机之间，就可以实现通信。 什么是httphttp（超文本传输协议），运行在TCP&#x2F;IP协议（网络层协议）之上，是应用层协议，主要解决如何包装数据 发展历史从上个世界90年代发布以来，http的版本主要有0.9、1.0、1."><meta name="author" content="Larmy"><meta name="copyright" content="Larmy"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://larmyliu.github.io/http%20%20https/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="Larmy Blog"><meta property="og:url" content="https://larmyliu.github.io/http%20%20https/"><meta property="og:site_name" content="Larmy Blog"><meta property="og:description" content="http  https什么是协议？网络协议是计算机之间为了实现网络通信而达成的一种“约定”或者”规则“，有了这种”约定“，不同厂商的生产设备，以及不同操作系统组成的计算机之间，就可以实现通信。 什么是httphttp（超文本传输协议），运行在TCP&#x2F;IP协议（网络层协议）之上，是应用层协议，主要解决如何包装数据 发展历史从上个世界90年代发布以来，http的版本主要有0.9、1.0、1."><meta property="og:image" content="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg"><meta property="article:published_time" content="2024-06-30T06:14:33.989Z"><meta property="article:modified_time" content="2024-06-30T06:14:33.989Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="prev" title="" href="https://larmyliu.github.io/html+css+js_%E5%9D%9A%E6%8C%8130s%E5%B0%8F%E6%B8%B8%E6%88%8F/"><link rel="next" title="" href="https://larmyliu.github.io/js%E5%92%8Cjq%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2e96985cda5177be1671242c01ea37b7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: {"text":"I,LOVE,YOU","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Larmy Blog" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/head4.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">79</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">15</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#http-https"><span class="toc-number">1.</span> <span class="toc-text">http  https</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%8F%E8%AE%AE%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">什么是协议？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFhttp"><span class="toc-number">1.2.</span> <span class="toc-text">什么是http</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2"><span class="toc-number">1.2.1.</span> <span class="toc-text">发展历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#http%E6%8A%A5%E6%96%87"><span class="toc-number">1.2.2.</span> <span class="toc-text">http报文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87-%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87"><span class="toc-number">1.2.3.</span> <span class="toc-text">请求报文&#x2F;响应报文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">1.2.4.</span> <span class="toc-text">常见状态码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#http-s%EF%BC%88security%EF%BC%89-https"><span class="toc-number">1.3.</span> <span class="toc-text">http + s（security）&#x3D; https</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#https%E8%BF%9E%E6%8E%A5%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">https连接过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86"><span class="toc-number">1.3.2.</span> <span class="toc-text">加密</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">对称加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">非对称加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86-%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">对称加密+非对称加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">中间人攻击</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81"><span class="toc-number">1.3.3.</span> <span class="toc-text">身份认证</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">数字证书</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">数字签名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E9%97%B4%E4%BA%BA%E5%8F%AF%E4%BB%A5%E5%AF%B9%E8%AF%81%E4%B9%A6%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%E7%AF%A1%E6%94%B9%E5%90%97%EF%BC%9F"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">中间人可以对证书内容进行篡改吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E9%97%B4%E4%BA%BA%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E6%8E%89%E5%8C%85%E8%AF%81%E4%B9%A6%E5%90%97%EF%BC%9F"><span class="toc-number">1.3.3.4.</span> <span class="toc-text">中间人可以直接掉包证书吗？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.3.3.5.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Larmy Blog</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">无题</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2024-06-30 14:14:33"><i class="far fa-calendar-alt fa-fw"></i> 发表于 2024-06-30</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2024-06-30 14:14:33"><i class="fas fa-history fa-fw"></i> 更新于 2024-06-30</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="http-https"><a href="#http-https" class="headerlink" title="http  https"></a>http  https</h1><h2 id="什么是协议？"><a href="#什么是协议？" class="headerlink" title="什么是协议？"></a>什么是协议？</h2><p>网络协议是计算机之间为了实现网络通信而达成的一种“约定”或者”规则“，有了这种”约定“，不同厂商的生产设备，以及不同操作系统组成的计算机之间，就可以实现通信。</p>
+<h2 id="什么是http"><a href="#什么是http" class="headerlink" title="什么是http"></a>什么是http</h2><p>http（超文本传输协议），运行在TCP&#x2F;IP协议（网络层协议）之上，是应用层协议，<strong>主要解决如何包装数据</strong></p>
+<h3 id="发展历史"><a href="#发展历史" class="headerlink" title="发展历史"></a>发展历史</h3><p>从上个世界90年代发布以来，http的版本主要有0.9、1.0、1.1、2.0、3.0</p>
+<p>具体有什么区别，可以参考我另一篇博客</p>
+<h3 id="http报文"><a href="#http报文" class="headerlink" title="http报文"></a>http报文</h3><p>上面已经说到http最主要的目的就是包装数据，他是通过http报文来把数据进行包装然后传递，http报文由<strong>首部</strong>，<strong>报文主体</strong>两个部分组成，首部和报文主体通过一行，报文结构如下，根据首部中的开始行不同分有<strong>请求报文</strong>和<strong>响应报文</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">首部</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">（空行）</td>
+</tr>
+<tr>
+<td align="center">报文主体</td>
+</tr>
+</tbody></table>
+<h3 id="请求报文-响应报文"><a href="#请求报文-响应报文" class="headerlink" title="请求报文&#x2F;响应报文"></a>请求报文&#x2F;响应报文</h3><p>请求报文由三大部分组成，<strong>请求行</strong>，<strong>消息报头</strong>，<strong>请求正文</strong></p>
+<p>响应报文也由三大部分组成，<strong>状态行</strong>，<strong>消息报头</strong>，<strong>响应正文</strong></p>
+<h3 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h3><ul>
+<li>2XX（成功）<ul>
+<li>200 成功获取服务器数据</li>
+<li>204 no content，请求成功，没有数据返回</li>
+</ul>
+</li>
+<li>3XX（重定向）<ul>
+<li>301 永久重定向</li>
+<li>302 临时重定向</li>
+<li>304 未修改</li>
+</ul>
+</li>
+<li>4XX（客户端错误）<ul>
+<li>400 bad request，请求报文中存在语法错误（可能是传输的字段写错或者没按照格式传输）</li>
+<li>403 forbidden，该请求被禁止</li>
+<li>404 资源未找到（一般可能是接口地址写错）</li>
+<li>405 method not allow，请求方式错误（比如需要post请求，但是用了get请求）</li>
+</ul>
+</li>
+<li>5XX（服务器错误）<ul>
+<li>500  internal Server error ，表示服务器端在执行请求时发生了错误</li>
+<li>502 bad gateway，无效响应</li>
+<li>503 service unavailable ，服务器超时，服务器超负载或正在进行停机维护</li>
+</ul>
+</li>
+</ul>
+<h2 id="http-s（security）-https"><a href="#http-s（security）-https" class="headerlink" title="http + s（security）&#x3D; https"></a>http + s（security）&#x3D; https</h2><p>为什么需要https</p>
+<p>HTTP虽然使用极为广泛, 但是却存在不小的安全缺陷, 主要是其数据的明文传送和消息完整性检测的缺乏, 而这两点恰好是网络支付,网络交易等新兴应用中安全方面最需要关注的，https是建立在http之上，在HTTP 的基础下加入TLS&#x2F;SSL，通过传输加密和身份认证，来保证数据的安全性。</p>
+<p><strong>https &#x3D; http + TLS&#x2F;SSL(加密) + 身份认证 + 完整性保护</strong></p>
+<h3 id="https连接过程"><a href="#https连接过程" class="headerlink" title="https连接过程"></a>https连接过程</h3><p><img src= "/img/loading.gif" data-src="http://avocado.oa.com/fconv/files/201812/84b04ee7a7e47af5212b240273619f9e.files/doc_image_4_w462_h643.jpg" alt="img"></p>
+<h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><p>为什么需要加密？在http中我们都是通过明文来传输数据的，如果使用http，某一天我在淘宝买东西，使用了我最多钱的银行卡进行付账，那么我就需要明文传输我的银行卡账户和银行卡密码，如果被一些别有用心的人劫持了我这次的请求，那么我的银行卡账号和密码就被别人知道了，我的钱包就岌岌可危了</p>
+<p>所以为弥补http明文传输的缺陷，https使用了加密功能，那么加密也有<strong>对称加密</strong>和<strong>非对称加密</strong></p>
+<h4 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h4><p>对称加密可以简单理解为，我现在有一把钥匙🔑，我发送信息之前通过这把钥匙进行加密，如果有人给我发送加密信息，我也可以用这把钥匙来进行解密<br><img src= "/img/loading.gif" data-src="https://sectigostore.com/blog/wp-content/uploads/2020/04/types-of-encryption-symmetric-encryption.png"></p>
+<p><strong>好处</strong>：<br>我们只需一把钥匙🔑就可以完成加密和解密操作，非常简单</p>
+<p><strong>坏处</strong>：<br>但是同时也暴露了一个问题？如何让别人拿到这把钥匙？难道我们通过明文传输这把钥匙🔑吗？显然是不可以的，这时候就引申出了非对称加密</p>
+<h4 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h4><p>非对称加密就是为了解决别人如何拿到钥匙🔑，在对称加密中我们只有一把钥匙🔑，那么在非对称加密中我们有两把钥匙：一把是<strong>公钥</strong>，一把是<strong>私钥</strong>，公钥加密的内容可以用私钥解密，私钥加密的内容可以用公钥来解密<br><img src= "/img/loading.gif" data-src="https://sectigostore.com/blog/wp-content/uploads/2020/04/types-of-encryption-asymmetric-encryption.png"><br>过程：</p>
+<ul>
+<li>浏览器生成公钥A，私钥A’;服务器生成公钥B，私钥B’</li>
+<li>通过明文传输浏览器的公钥A给服务器，服务器的公钥B给浏览器</li>
+<li>浏览器给服务器发消息时用私钥A’进行加密，服务器通过浏览器的公钥A进行解密，成功拿到浏览器加密数据</li>
+<li>服务器给浏览器发消息时用私钥B’进行加密，浏览器通过服务器的公钥B进行解密，成功拿到服务器加密数据</li>
+</ul>
+<p>看上去非对称加密成功解决了我们的问题，但是其实还是有问题存在的，那就是<strong>中间人攻击</strong>，这个我们等一下再说</p>
+<p>抛开攻击先不说，https并没有采用非对称加密来进行数据加密，因为加密是一个非常复杂的过程，那么就意味着解密需要大量的<strong>耗时</strong>，如果我每一条数据加密解密的时间都很长，用户的等到时间也就增长，那么用户体验就会下降，这是我们不愿意看到的</p>
+<h4 id="对称加密-非对称加密"><a href="#对称加密-非对称加密" class="headerlink" title="对称加密+非对称加密"></a>对称加密+非对称加密</h4><p>那么最终https的加密采用的是<strong>对称加密+非对称加密</strong>的形式，那么具体是怎样来实现的<br>过程：</p>
+<ul>
+<li>服务器利用<strong>非对称加密</strong>生成公钥A，私钥A’</li>
+<li>浏览器请求时，明文传输公钥A</li>
+<li>浏览器拿到公钥A后，利用<strong>对称加密</strong>生成秘钥X</li>
+<li>浏览器用公钥A加密刚刚生成的秘钥X，传回给服务器</li>
+<li>服务器用私钥A’解密，拿到秘钥X</li>
+<li>所有数据通过秘钥X进行加密解密</li>
+</ul>
+<p>这样就解决了对称加密对方无法拿到秘钥的问题，和非对称加密耗时的问题</p>
+<h4 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h4><p>就算使用了<strong>对称加密➕非对称加密</strong>的形式来加密数据，就一定能保证我们的数据不会被泄露吗？显然世界上没有绝对的事情<br><img src= "/img/loading.gif" data-src="https://blog.pradeo.com/hubfs/mitm.png"><br>中间人攻击其实就是在浏览器和服务器之间有个第三者（小三），我们的数据都经过他，他可以加密和解密我们的数据，那么具体过程如下：</p>
+<ul>
+<li>浏览器非对称加密生成公钥A，私钥A’</li>
+<li>想通过明文发送公钥A给服务器，但是此时这个请求被中间人劫持了</li>
+<li>中间人自己也利用非对此加密生成公钥B，私钥B’,并将公钥B发送给服务器</li>
+<li>服务器拿到中间人的公钥B后，利用<strong>对称加密</strong>生成秘钥X，利用公钥B加密后发送回给中间人</li>
+<li>中间人利用私钥B’解密，成功拿到秘钥X，偷偷保存起来</li>
+<li>中间人再利用劫持到的公钥A，加密秘钥X，发送给回浏览器</li>
+<li>浏览器用自己的私钥A’,解密拿到秘钥X，双方开始利用秘钥X进行加密解密数据</li>
+<li>中间人成功拿到加密数据</li>
+</ul>
+<p>在双方都不知道的情况下，数据就这样被泄露了，因为公钥本身是明文传输的，难道还得对公钥的传输进行加密？为了解决这个问题，我们引出<strong>身份认证</strong></p>
+<h3 id="身份认证"><a href="#身份认证" class="headerlink" title="身份认证"></a>身份认证</h3><p>来一个生活场景，我买了一张飞往北京的机票，如果在没有身份认证的情况下，假如有人知道我买了一张机票并且提前前往机场领取机票，那么我就损失了上千元，所以我们就需要验证身份，证明你本人是你本人，那么我们拿机票时就需要<strong>身份证</strong>才可以成功拿到机票，由<strong>权威</strong>的政府机关颁发</p>
+<p>那么https也是通过专门的权威机构<strong>CA</strong>（Certificate Authority）来颁发<strong>证书</strong>来确定你身份的真实性</p>
+<p>那么我们就可以这样理解，在https请求中，<strong>CA</strong>作为一个大家都信赖的大哥，如果某个网站能够拿到这个大哥颁发的<strong>证书</strong>，那么这个网站的请求都是可靠的</p>
+<h4 id="数字证书"><a href="#数字证书" class="headerlink" title="数字证书"></a>数字证书</h4><p>在我们使用https请求之前，可以去向CA机构申请证书，证书内容包括域名、申请者信息、公钥信息等等。如果拥有CA机构颁发的证书，那个请求就是可靠的，那么他是通过什么方式来证明这个证书是可靠的呢？</p>
+<p>在申请证书时会有相关信息的填写，被认可后，会根据这些信息生成一个<strong>签名</strong>，比较证书内容和签名是否一致，就可以知道我们的信息是否有被修改</p>
+<p>这就是数字证书的“防伪技术”，这里的“签名”就叫<strong>数字签名</strong></p>
+<h4 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h4><p>那么数字签名的生成和验证是一个怎么样的过程</p>
+<p>生成：</p>
+<ul>
+<li>受信任的CA机构有非对称加密的公钥A，私钥A’</li>
+<li>对证书内的相关数据内容进行hash，得到数据X</li>
+<li>将数据X用私钥A’进行加密，得到数字签名S</li>
+</ul>
+<p>证书内容和数字签名一起组成了证书，发送给浏览器，那么浏览器数如何验证的？</p>
+<p>验证：</p>
+<ul>
+<li>浏览器拿到证书后，得到证书内容和数字签名S</li>
+<li>由于是浏览器信任的机构，所以浏览器保有它的公钥A</li>
+<li>用公钥A进行解密签名S，得到在生成过程中，hash过后的证书内容数据X</li>
+<li>用证书里指明的hash算法对证书内容进行hash得到数据X’</li>
+<li>如果没有被篡改那么 X &#x3D; X’,等于则表明证书可信</li>
+</ul>
+<h4 id="中间人可以对证书内容进行篡改吗？"><a href="#中间人可以对证书内容进行篡改吗？" class="headerlink" title="中间人可以对证书内容进行篡改吗？"></a>中间人可以对证书内容进行篡改吗？</h4><p>我们说过中间人攻击，那么中间人可以对证书的内容进行篡改吗？显然是不可以的，假设中间人篡改了证书的原文，但是他没有CA机构的私钥，所以无法修改数字签名。浏览器拿到证书后，会对证书进行验证，解密后就会发现内容不一致，则说明证书已被篡改，证书不可信，从而终止向服务器传输信息，防止信息泄露给中间人</p>
+<h4 id="中间人可以直接掉包证书吗？"><a href="#中间人可以直接掉包证书吗？" class="headerlink" title="中间人可以直接掉包证书吗？"></a>中间人可以直接掉包证书吗？</h4><p>那么中间人无法修改证书内容，那么中间人直接把整个证书换掉能不能呢？也是不可以的，首先中间人可以通过CA机构获得CA颁发的证书，如果直接把中间人直接把整个证书进行掉包，发送给浏览器。因为证书内部有域名等相关信息，浏览器一对比就会发现，这个证书不是自己的了</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>既然https可以保证数据的安全，为什么我们不全部都使用https来发送请求呢？首先是http请求已经可以满足我们的大部分需求了；其次证书是需要花钱去购买的，价格也比较高，属于如果是普通的请求我们就不需要https，直接使用http请求就可以</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Larmy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://larmyliu.github.io/http%20%20https/">https://larmyliu.github.io/http%20%20https/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://larmyliu.github.io" target="_blank">Larmy Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/07/29/mihIEzL6w8CKYvT.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/html+css+js_%E5%9D%9A%E6%8C%8130s%E5%B0%8F%E6%B8%B8%E6%88%8F/"><img class="prev-cover" data-src="https://i.loli.net/2020/07/29/2v4UQ9ASXwNyWIG.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/js%E5%92%8Cjq%E5%8A%A8%E6%80%81%E6%B7%BB%E5%8A%A0%E5%92%8C%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0/"><img class="next-cover" data-src="https://i.loli.net/2020/07/29/aPXsI9zAtlYKR1n.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="lv-container" data-id="city" data-uid="MTAyMC81MTE2NS8yNzY0Ng"><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Larmy</div><div class="framework-info"><span>驱动 </span><a target="_blank" rel="noopener" href="https://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><span>Butterfly</span></a></div><div class="footer_custom_text">Hi! Welcome to my blog!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" title="缩小字体"><i class="fas fa-minus"></i></button><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/third-party/click_heart.js"></script><script src="/js/third-party/ClickShowText.js"></script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":200,"height":400,"position":"left","hOffset":0,"vOffset":-50},"mobile":{"show":true,"scale":0.5},"log":false,"tagMode":false});</script></body></html>
