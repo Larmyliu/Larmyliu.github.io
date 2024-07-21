@@ -1,4 +1,12 @@
-﻿**VUE报错Uncaught TypeError: __WEBPACK_IMPORTED_MODULE_0_jquery___default(...)(...).niceScroll is not a function**
+﻿---
+title: VUE报错Uncaught TypeError:__WEBPACK_IMPORTED_MODULE_0_jquery___default(...)(...).niceScroll is not a function
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+**VUE报错Uncaught TypeError: __WEBPACK_IMPORTED_MODULE_0_jquery___default(...)(...).niceScroll is not a function**
 
 在vue项目里报了这个错，原因是我想在这个地方初始化时，利用一下一下jq的美化滚动条
 

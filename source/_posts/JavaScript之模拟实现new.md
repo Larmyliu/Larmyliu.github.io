@@ -1,3 +1,12 @@
+---
+title: JavaScript之模拟实现new
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿## JavaScript之模拟实现new
 
 `new`是JavaScript的一个关键字，可以实例化构造函数

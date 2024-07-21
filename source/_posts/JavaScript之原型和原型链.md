@@ -1,3 +1,12 @@
+---
+title: JavaScript之原型和原型链
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿## JavaScript之原型和原型链
 
 在JavaScript的学习过程中，原型链肯定是一个很重要的知识点，下面我们就来深入的去看一下原型链

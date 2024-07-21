@@ -1,4 +1,12 @@
-﻿JavaScript是单线程语言，前面的任务没做完，后面的任务只能等着。
+﻿---
+title: Web Worker 介绍和简单实例
+date: 2020-11-06 13:16:38
+tags:
+	- 前端
+	- 笔记
+categories: 前端
+---
+JavaScript是单线程语言，前面的任务没做完，后面的任务只能等着。
 web worker可以为JavaScript创建多线程环境，好处是，一些计算密集型或高延迟的任务，被 Worker 线程负担了，主线程（通常负责 UI 交互）就会很流畅，不会被阻塞或拖慢。
 
 Web Worker 有以下几个使用注意点。

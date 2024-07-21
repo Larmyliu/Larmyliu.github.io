@@ -1,3 +1,12 @@
+---
+title: Sass（Scss）简单认识
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ## Sass（Scss）简单认识
 
 我个人平时比较常使用的是Less，但是公司前端开发是在Vue中用Sass，为了统一一下语言，所以学习一下Sass。

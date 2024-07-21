@@ -1,4 +1,8 @@
-﻿今天在用webpack打包文件时报错
+﻿---
+title: 错误_Module parse failed_ Unexpected character '�' (1_0)的解决方法
+date: 2024-06-30 14:49:02
+---
+今天在用webpack打包文件时报错
 
 ```javascript
 ERROR in ./src/img/head4.jpg 1:0

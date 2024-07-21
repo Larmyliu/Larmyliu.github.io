@@ -1,3 +1,12 @@
+---
+title: node搭建静态服务器时，无法加载静态html
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿关于在node搭建静态服务器的时候，发现无法加载静态的html，直接返回的是`res.end()`里面的内容
 
 ```javascript

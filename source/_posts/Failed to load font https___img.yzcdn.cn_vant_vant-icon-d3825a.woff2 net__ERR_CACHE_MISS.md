@@ -1,4 +1,9 @@
-﻿在微信开发者工具引入了vant weapp 库，但是在使用icon的时候，在开发者工具中无法显示icon，以及报错
+﻿---
+title: Failed to load font https___img.yzcdn.cn_vant_vant-icon-d3825a.woff2 net__ERR_CACHE_MISS
+date: 2024-06-30 14:47:11
+---
+
+在微信开发者工具引入了vant weapp 库，但是在使用icon的时候，在开发者工具中无法显示icon，以及报错
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200720091826877.png)
 在github上找到了一些回答
 [github](https://github.com/youzan/vant-weapp/issues/1354)

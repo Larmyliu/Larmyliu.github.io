@@ -1,3 +1,12 @@
+---
+title: JavaScript之闭包理解
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿## JavaScript之闭包理解
 
 闭包（Closure）是JavaScript学习过程中一个非常重要的问题

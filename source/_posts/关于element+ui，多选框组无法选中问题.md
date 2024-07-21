@@ -1,3 +1,12 @@
+---
+title: 关于element+ui，多选框组无法选中问题
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿遇到一个问题，在使用element ui的多选框组件`el-checkbox-group和el-checkbox`的时候出现了无法选中选项的事情
 
 ```javascript

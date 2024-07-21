@@ -1,3 +1,12 @@
+---
+title: CSS3动画之旋转小魔方
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿利用CSS3动画特性的小例子
 
 ```javascript

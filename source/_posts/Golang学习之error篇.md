@@ -1,3 +1,13 @@
+---
+title: Golang学习之error篇
+date: 2024-06-30 15:00:11
+tags:
+  - 后端
+  - golang
+categories:
+  - 后端
+---
+
 ## Golang学习之error篇
 
 以一个打开系统文件为例，在error文件夹下有个`hello.txt`

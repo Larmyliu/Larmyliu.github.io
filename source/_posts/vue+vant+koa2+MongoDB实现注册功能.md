@@ -1,3 +1,12 @@
+---
+title: vue+vant+koa2+MongoDB实现注册功能
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿最近学了一下koa2和MongoDB，写个注册功能更加熟悉一下
 
 首先，用`vue+vant`把注册页面写出来

@@ -1,3 +1,12 @@
+---
+title: JavaScript之执行上下文（EC）
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿## JavaScript之执行上下文（EC）
 
 在JavaScript中，执行上下文是一个基本概念，在执行上下文中，包括了变量对象（VO，Variable Object），作用域链（Scope Chain），this指向等，在闭包，函数/变量提升息息相关

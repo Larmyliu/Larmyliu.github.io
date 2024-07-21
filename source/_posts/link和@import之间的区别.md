@@ -1,3 +1,12 @@
+---
+title: link和@import之间的区别
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿link和@import都可以导入css样式，但是他们之间有什么区别？
 区别：
 1.link不仅可以导入样式表，还可以导入其他如如favicon，但@import只能导入样式表

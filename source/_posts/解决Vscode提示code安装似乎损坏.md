@@ -1,3 +1,12 @@
+---
+title: 解决Vscode提示code安装似乎损坏
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿最近打开vscode，老是有这样一句提示
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200715211322687.png)
 原因是我安装了一个叫background的拓展，并且编辑器的标题栏会显示**不受支持**四个字

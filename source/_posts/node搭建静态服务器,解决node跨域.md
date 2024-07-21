@@ -1,3 +1,12 @@
+---
+title: node搭建静态服务器,解决node跨域
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿需要一个`serve-static`模块，可以用npm或者cnpm下载
 1.使用express模块框架
 

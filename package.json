@@ -16,7 +16,7 @@
     "hexo": "^7.2.0",
     "hexo-asset-image": "^1.0.0",
     "hexo-browsersync": "^0.3.0",
-    "hexo-deployer-git": "^4.0.0", 
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
@@ -31,6 +31,7 @@
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-theme-butterfly": "^4.13.0",
+    "hexo-translate-title": "^1.0.11",
     "live2d-widget-model-haruto": "^1.0.5",
     "live2d-widget-model-hijiki": "^1.0.5",
     "live2d-widget-model-tororo": "^1.0.5"

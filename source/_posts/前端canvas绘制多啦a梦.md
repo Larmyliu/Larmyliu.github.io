@@ -1,3 +1,12 @@
+---
+title: 前端canvas绘制多啦a梦
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿最近学了canvas，写个小实例来巩固一下知识点
 上一下效果图：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200207160623300.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdWFybXlsaXU=,size_16,color_FFFFFF,t_70)

@@ -1,3 +1,12 @@
+---
+title: JavaScript之instanceof底层原理
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ## JavaScript之instanceof底层原理
 
 instanceof可以用来判断某个实例是否属于某个它的父类型，也可以判断某个引用是否属于某个构造函数

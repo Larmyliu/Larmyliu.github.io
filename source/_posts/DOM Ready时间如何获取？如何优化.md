@@ -1,4 +1,8 @@
-﻿## DOM Ready时间如何获取？如何优化
+﻿---
+title: DOM Ready时间如何获取？如何优化
+date: 2024-06-30 14:47:11
+---
+## DOM Ready时间如何获取？如何优化
 
 高级浏览器通过DOMContentLoaded事件获取。
 

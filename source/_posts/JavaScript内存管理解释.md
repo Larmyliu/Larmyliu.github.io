@@ -1,3 +1,12 @@
+---
+title: JavaScript内存管理解释
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ## JavaScript内存管理解释
 
 很多时候，对于JavaScript开发者可能对内存管理毫无了解，毕竟JavaScript引擎帮你解决了这个问题

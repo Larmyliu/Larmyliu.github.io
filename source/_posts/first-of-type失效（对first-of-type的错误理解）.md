@@ -1,3 +1,12 @@
+---
+title: first-of-type失效（对first-of-type的错误理解）
+date: 2024-06-30 14:47:11
+tags:
+  - 前端
+categories:
+  - 前端
+---
+
 ﻿今天遇到了一个问题
 
 ```

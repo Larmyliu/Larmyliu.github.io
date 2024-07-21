@@ -1,4 +1,8 @@
-﻿想利用hexo搭建一个个人博客，但是发现hexo init的时候一直被refused了。
+﻿---
+title: /root/blog/Larmyliu.github.io/source/_posts/（git）Failed to connect to 127.0.0.1 port 50462_ Connection refused
+date: 2024-06-30 14:49:02
+---
+想利用hexo搭建一个个人博客，但是发现hexo init的时候一直被refused了。
 但是在git里面查了`git config --global http.proxy`并没有显示我有用代理
 查了端口号什么的都显示没有
 

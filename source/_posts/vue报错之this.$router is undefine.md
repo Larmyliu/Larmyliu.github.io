@@ -1,4 +1,10 @@
-﻿## vue报错之this.$router is undefine
+﻿---
+title: vue报错之this.$router is undefine
+date: 2021-01-15 16:39:19
+tags:
+	- 前端
+---
+## vue报错之this.$router is undefine
 最近写项目遇到这个报错，特此记录一下
 
 ```javascript
