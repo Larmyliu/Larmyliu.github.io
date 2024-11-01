@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://larmyliu.github.io/%E4%BD%BF%E7%94%A8%20Go%20%E8%AF%AD%E8%A8%80%E4%B8%AD%E7%9A%84%20Validator%20%E8%BF%9B%E8%A1%8C%E7%BB%93%E6%9E%84%E4%BD%93%E9%AA%8C%E8%AF%81/</loc>
+    
+    <lastmod>2024-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://larmyliu.github.io/%E6%95%B0%E7%BB%84%E5%92%8C%E5%88%87%E7%89%87%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     
     <lastmod>2024-07-21</lastmod>
@@ -533,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://larmyliu.github.io/vue+vant+koa2+MongoDB%E5%AE%9E%E7%8E%B0%E6%B3%A8%E5%86%8C%E5%8A%9F%E8%83%BD/</loc>
+    <loc>https://larmyliu.github.io/vue%E5%BE%AE%E4%BF%A1%E7%BD%91%E9%A1%B5%E7%99%BB%E5%BD%95/</loc>
     
     <lastmod>2024-06-30</lastmod>
     
@@ -542,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://larmyliu.github.io/vue%E5%BE%AE%E4%BF%A1%E7%BD%91%E9%A1%B5%E7%99%BB%E5%BD%95/</loc>
+    <loc>https://larmyliu.github.io/vue+vant+koa2+MongoDB%E5%AE%9E%E7%8E%B0%E6%B3%A8%E5%86%8C%E5%8A%9F%E8%83%BD/</loc>
     
     <lastmod>2024-06-30</lastmod>
     
@@ -713,7 +722,7 @@
   </url>
   
   <url>
-    <loc>https://larmyliu.github.io/music/index.html</loc>
+    <loc>https://larmyliu.github.io/tags/index.html</loc>
     
     <lastmod>2024-06-30</lastmod>
     
@@ -722,7 +731,7 @@
   </url>
   
   <url>
-    <loc>https://larmyliu.github.io/tags/index.html</loc>
+    <loc>https://larmyliu.github.io/music/index.html</loc>
     
     <lastmod>2024-06-30</lastmod>
     
@@ -751,7 +760,7 @@
 
   <url>
     <loc>https://larmyliu.github.io/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -759,112 +768,112 @@
   
   <url>
     <loc>https://larmyliu.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/JavaScript/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/nodeJS/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/%E5%90%8E%E7%AB%AF/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/golang/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/hexo/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/Vue3/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/http/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/websocket/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/typora/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/element/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/Vue/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/tags/Golang/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -873,49 +882,49 @@
   
   <url>
     <loc>https://larmyliu.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/categories/nodeJS/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/categories/%E5%90%8E%E7%AB%AF/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/categories/hexo/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://larmyliu.github.io/categories/Golang/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
